@@ -51,9 +51,13 @@ class Zero_Player():
         self.name = name
         self.temperature = temperature
         self.tree, self.edge_statistics = mcts.MCTS.get_tree_and_edges()
-        self.nn_predictor = neural_network.nn_predictor(nn_type)
         self.value_estimate = ""
-        self.keras_nn = keras.models.load_model('./best_keras_model.tf')
+
+    def load_keras(self):
+        try:
+            self.keras_nn = keras.models.load_model("./best_keras_model.tf")
+        except:
+            self.keras_nn = neural_network.CNN_Model()
 
     def nn_turn(self, board):
         possible_moves = np.where(board.board.ravel() == 0)[0]
@@ -66,13 +70,15 @@ class Zero_Player():
             next_board = deepcopy(board)
             next_board.add_move(self.type, *divmod(move, 3))
             x_inp = np.stack([[next_board.board]], -1)
-            pred_one_win = self.keras_nn.predict(x_inp)[0][0]
-            pred_two_win = 1-pred_one_win
+            pred_win = self.keras_nn.predict(x_inp)[0][0]
+            pred_one_win = pred_win[2]
+            draw = pred_win[1]
+            pred_two_win = pred_win[0]
 
             if self.type == 1:
-                Q = pred_one_win
+                Q = pred_one_win - pred_two_win
             else:
-                Q = pred_two_win
+                Q = pred_two_win - pred_one_win
 
 
             if Q > Qmax:
@@ -100,7 +106,10 @@ class Zero_Player():
                 return self.nn_turn(board)
 
             illegal_moves = np.where(board.board.ravel()!=0)[0]
-            pred_winner, prior_prob = self.nn_predictor.predict(board.board)
+            x_inp = np.stack([[board.board]], -1)
+            pred_winner, prior_prob = self.keras_nn.predict(x_inp)
+            prior_prob = prior_prob[0]
+
             prior_prob[prior_prob < 0] = 1e-6
             np.put(prior_prob, illegal_moves, 0)
 
@@ -112,7 +121,7 @@ class Zero_Player():
                 idx = b.Board.stringmove2int(k)
                 P = prior_prob[idx]
                 move_statistics[k]['P'] = P
-                move_statistics[k]['PUCT'] = mcts.MCTS.PUCT_function(N, move_statistics[k])
+                move_statistics[k]['PUCT'] = mcts.MCTS.PUCT_function(self.type, N, move_statistics[k])
             m = [x for x in move_statistics.keys()]
             puct = np.array([move_statistics[k]['PUCT'] for k in m])
             min_puct = np.min(puct)

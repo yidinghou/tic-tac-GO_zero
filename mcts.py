@@ -62,7 +62,7 @@ class MCTS():
                 final = game[0][i+1]
                 move = (final-initial).sum()
                 edge = board.Board.arr2str(initial)+'2'+board.Board.arr2str(final)
-                win = game[1] * move
+                win = game[1]
                 edges[edge]['N'] += 1
                 edges[edge][cls.WIN2DICT_MAP[win]] += 1
                 action = (edges[edge]['W']-edges[edge]['L'])/edges[edge]['N']
@@ -70,8 +70,8 @@ class MCTS():
         cls.save_tree_edges(tree, edges)
 
     @classmethod
-    def PUCT_function(cls, N, edge):
-        return edge['Q'] + cls.PUCT_CONSTANT * edge['P'] * np.sqrt(N) / (1+edge['N'])
+    def PUCT_function(cls, bool, N, edge):
+        return edge['Q']*bool + cls.PUCT_CONSTANT * edge['P'] * np.sqrt(N) / (1+edge['N'])
 
 
 def print_edges(edges):

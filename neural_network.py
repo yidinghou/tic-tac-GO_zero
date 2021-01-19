@@ -1,9 +1,17 @@
 __author__ = 'Florin Bora'
 
+import board as b
+
+import pandas as pd
 import os
 import numpy as np
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+import keras
+from keras.layers import Input, Dense, Concatenate
+from keras.models import Sequential, Model
+from keras.layers import Dense, Conv1D, Flatten, Conv2D, MaxPooling1D, MaxPooling2D
+from keras.optimizers import SGD
+from keras import initializers
+from keras.regularizers import l2
 
 def augment_data_set(data):
     augmented_data = data.copy()
@@ -18,94 +26,136 @@ def augment_data_set(data):
     return augmented_data
 
 
-def update_nn_training_set(new_games, training_set):
-    '''
-    Append the new games to the trainig set.
-    The training set is a list [x, y] where
-        x is the unravel state of the board of length 9
-        y is the concatenation of
-            one hot encoding of the winner and
-            the next move out of 9 choices on the board
-    '''
-    for game in new_games:
-        winner = game[1]
-        one_hot_winner = np.zeros(3)
-        one_hot_winner[winner+1] = 1
-        for i in range(len(game[0])-1):
-            initial = game[0][i]
-            final = game[0][i+1]
-            move = np.abs((final-initial).ravel())
-            y = np.concatenate([one_hot_winner, move], axis=0).reshape(-1, 12)
-            x = initial.reshape(-1, 9)
-            if training_set is None:
-                training_set = [x, y]
-            else:
-                training_set[0] = np.vstack((training_set[0], x))[-100000:, :]
-                training_set[1] = np.vstack((training_set[1], y))[-100000:, :]
-    return training_set
+def create_data_from_mcts(edge_statistics):
+    board = b.Board()
+    X = []
+    Y = []
+    N = []
+    Y_move = []
+
+    X_init_state = []
+    X_final_state = []
+
+    keys = list(edge_statistics.keys())
+    for key in keys:
+        state = edge_statistics[key]
+        initial_state, final_state = key.split("2")
+        X_init_state.append(initial_state)
+        X_final_state.append(final_state)
+
+        initial_arr = board.str2arr(initial_state)
+        final_arr = board.str2arr(final_state)
+        move = final_arr - initial_arr
+        p_type = move.sum()
+        move = move * p_type
+        move = move.reshape(-1, 9)[0]
+        move = np.where(move == 1)[0][0]
+
+        Y.append(state["Q"])
+        N.append(state["N"])
+        Y_move.append(move)
+
+    X = np.array(X)
+    Y = np.array(Y)
+    Y_move = np.array(Y_move)
+
+    df = pd.DataFrame({
+        'init_state': X_init_state,
+        'final_state': X_final_state,
+        'move': Y_move,
+        'value': Y,
+        'N': N
+    })
+
+    df = df[df["N"] > 0]
+    values_df = df[["final_state", "value", "N"]]
+    moves_df = df[["init_state", "move"]]
+    master_df = values_df.merge(moves_df, left_on="final_state", right_on="init_state", how="left")
+    master_df["move"].fillna(9, inplace=True)
+
+    state_freq = master_df["final_state"].value_counts()
+    inv_state_freq = sum(state_freq) / state_freq
+    inv_state_freq.name = "inv_freq"
+    inv_state_freq
+    master_df = master_df.merge(inv_state_freq, left_on="final_state", right_index=True)
+
+    return (master_df)
 
 
-def train_nn(train_data, iterations=1000):
-    X = train_data[0]
-    y = train_data[1]
+def update_nn_training_set(edge_statistics, n=10000):
+    master_df = create_data_from_mcts(edge_statistics)
+    data_sample = master_df.sample(n=n, weights='inv_freq', replace=True)
+    board = b.Board()
 
-    check_point = nn_predictor.LAST
-    sess = tf.Session()
-    saver = tf.train.import_meta_graph(nn_predictor.META)
+    X = np.array(data_sample["final_state"])
+    X = np.array([board.str2arr(state) for state in X])
 
-    saver.restore(sess, check_point)
-    X_tf = sess.graph.get_tensor_by_name('X:0')
-    y_tf = sess.graph.get_tensor_by_name('y:0')
-    training_op_tf = sess.graph.get_tensor_by_name('training_op:0')
-    loss_tf = sess.graph.get_tensor_by_name('loss:0')
-    global_step_tf = sess.graph.get_tensor_by_name('global_step:0')
-    feed_dict = { X_tf:X, y_tf: y}
+    Y = np.array(data_sample["value"])
+    # convert policy move index to one hot array
+    Y_policy = np.eye(10)[np.array(data_sample["move"].values).astype(int)]
 
+    nb_classes = 3
+    targets = (Y+1)
+    one_hot_targets = np.eye(nb_classes)[targets.astype(int)]
+
+    return X, one_hot_targets, Y_policy
+
+
+def train_nn(model, edge_statistics, iterations=10):
+
+    verbose = 0
     for i in range(iterations):
-        _, g_step, loss = sess.run([training_op_tf, global_step_tf, loss_tf], feed_dict=feed_dict)
-        if g_step%500 == 0:
-            print('training neural network: global_step={}, loss={}'.format(g_step, loss))
-    saved_path = saver.save(sess, nn_predictor.CHECK_POINTS_NAME,
-        global_step=g_step, write_meta_graph=False)
-    nn_predictor.LAST = saved_path
+        train_data = update_nn_training_set(edge_statistics,  n=10000)
+        X_clean = train_data[0]
+        Y_value = train_data[1]
+        Y_policy = train_data[2]
+
+        if (i+1) ==10:
+            verbose = 1
+
+        X_final = np.stack([X_clean], axis=-1)
+        model.fit(X_final, [Y_value, Y_policy], epochs=10, verbose=verbose)
+
+    return model
 
 
-class model_two_hidden():
-    def __init__(self, size_x=9, size_y=12):
-        self.size_x = size_x
-        self.size_y = size_y
-        size_hidden_1 = size_x
-        size_hidden_2 = size_y
+def CNN_Model():
+    Input_1 = Input(shape=(3, 3, 1))
 
-        if not os.path.isdir(nn_predictor.CHECK_POINTS_DIR):
-            os.mkdir(nn_predictor.CHECK_POINTS_DIR)
+    x1 = Conv2D(filters=6, kernel_size=(1, 3), activation='relu',
+                kernel_regularizer=l2(0.0005),
+                kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
+                input_shape=(3, 3, 1))(Input_1)
 
-        self.graph = tf.Graph()
-        with self.graph.as_default():
-            self.X = tf.placeholder(tf.float32, [None, size_x], name='X')
-            self.y = tf.placeholder(tf.float32, [None, size_y], name='y')
+    x2 = Conv2D(filters=6, kernel_size=(3, 1), activation='relu',
+                kernel_regularizer=l2(0.0005),
+                kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
+                input_shape=(3, 3, 1))(Input_1)
 
-            weight1 = tf.Variable(tf.random_uniform([size_x, size_hidden_1]), name='weight1')
-            bias1 = tf.Variable(tf.zeros(size_hidden_1), name='bias1')
-            activation1 = tf.nn.relu(tf.nn.xw_plus_b(self.X, weight1, bias1), name='activation1')
+    x3 = Conv2D(filters=10, kernel_size=(3, 3), activation='relu',
+                kernel_regularizer=l2(0.0005),
+                kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
+                input_shape=(3, 3, 1))(Input_1)
 
-            weight2 = tf.Variable(tf.random_uniform([size_hidden_1, size_hidden_2]), name='weight2')
-            bias2 = tf.Variable(tf.zeros(size_hidden_2), name='bias2')
-            activation2 = tf.nn.relu(tf.nn.xw_plus_b(activation1, weight2, bias2), name='activation2')
+    x1 = MaxPooling2D((3, 1))(x1)
+    x2 = MaxPooling2D((1, 3))(x2)
+    x3 = MaxPooling2D((1, 1))(x3)
 
-            weight3 = tf.Variable(tf.random_uniform([size_hidden_2, size_y]), name='weight3')
-            bias3 = tf.Variable(tf.zeros(size_y), name='bias3')
-            activation3 = tf.nn.relu(tf.nn.xw_plus_b(activation2, weight3, bias3), name='activation3')
+    x = Concatenate()([x1, x2, x3])
+    x = Flatten()(x)
 
-            self.loss = tf.reduce_mean(tf.squared_difference(activation3, self.y), name='loss')
+    value_head = Dense(10, activation='relu')(x)
+    value_head = Dense(3, activation='softmax', name="V")(value_head)
 
-            self.predicted_y = activation3
-            self.global_step = tf.Variable(0, name='global_step', trainable=False)
+    policy_head = Dense(90, activation='relu')(x)
+    policy_head = Dense(10, activation='softmax', name="P")(policy_head)
 
-            optimizer = tf.train.AdamOptimizer(name='adam_optimizer')
-            self.train_op = optimizer.minimize(self.loss, global_step=self.global_step, name='training_op')
-            self.init_op = tf.global_variables_initializer()
-
+    model = Model(inputs=Input_1, outputs=[value_head, policy_head])
+    opt = SGD(lr=0.1, momentum=0.09)
+    model.compile(optimizer=opt,
+                         loss={"P": 'categorical_crossentropy', "V": "categorical_crossentropy"},
+                         metrics=['acc'])
+    return model
 
 class nn_predictor():
     BEST = None
@@ -118,7 +168,7 @@ class nn_predictor():
         if nn_type in ['best', 'last']:
             if nn_predictor.LAST is None or nn_predictor.BEST is None:
                 # if no model was ever constructed
-                self.model = model_two_hidden()
+                self.model = CNN_Model()
                 with tf.Session(graph=self.model.graph) as sess:
                     sess.run(self.model.init_op)
                     saver = tf.train.Saver(tf.global_variables())

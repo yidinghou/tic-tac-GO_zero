@@ -4,18 +4,24 @@ import neural_network
 import player
 import game
 import mcts
+import keras
 
 def interactive_game():
     mcts.MCTS.PUCT_CONSTANT = 0.33
     global_step = 50000
     nn_check_pt = neural_network.nn_predictor.CHECK_POINTS_NAME + '-' + str(global_step)
-    player1 = player.Zero_Player('x', 'Bot_ZERO', nn_type=nn_check_pt, temperature=0)
-    player2 = player.Interactive_Player('o', 'Human')
-    player1.value_estimate="nn"
+    # player1 = player.Zero_Player('x', 'Bot_ZERO', nn_type=nn_check_pt, temperature=0)
+    # player2 = player.Interactive_Player('o', 'Human')
+    # player1.keras_nn = keras.models.load_model("./best_keras_model.tf")
+    # player1.value_estimate="nn"
+    # print(player2.value_estimate)
 
     player2 = player.Zero_Player('x', 'Bot_ZERO', nn_type=nn_check_pt, temperature=0)
     player1 = player.Interactive_Player('o', 'Human')
     player2.value_estimate="nn"
+    print(player2.value_estimate)
+    player2.keras_nn = keras.models.load_model("./best_keras_model.tf")
+
 
     z_v_h_game = game.Game(player1, player2)
     outcome = z_v_h_game.run()
@@ -26,6 +32,7 @@ def interactive_game():
     else:
         winner = player1 if outcome[1] == player1.type else player2
         print('{} won the game!'.format(winner.name))
+
 
 
 def main():
