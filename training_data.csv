@@ -1,0 +1,5479 @@
+init_state,Value
+ xx o    ,0
+ xx o   o,1
+xxo    o ,0
+xxo   xo ,0
+  oxooxx ,1
+  oxooxxx,1
+ ooxo  xx,1
+ ooxox xx,-1
+ xx   oox,1
+ xx o oox,1
+oxo  xxox,0
+oxoo xxox,0
+o  x xo x,1
+o  xoxo x,1
+x o o x x,1
+x o o xox,1
+   x    o,1
+   xx   o,0
+oo   x x ,1
+oo   xxx ,-1
+   x oo x,0
+x  x oo x,0
+ oox   x ,1
+ oox   xx,-1
+ x x xo o,-1
+ x xoxo o,-1
+o xx x o ,1
+ooxx x o ,1
+  o  x x ,-1
+  oo x x ,0
+x   x o  ,0
+xo  x o  ,1
+ox xx  o ,0
+ox xxo o ,0
+ oxo xx  ,1
+ooxo xx  ,1
+     x  o,0
+x    x  o,0
+   x o   ,0
+   x ox  ,0
+  ox x xo,-1
+o ox x xo,1
+x   xoo  ,1
+x   xoox ,1
+ox  oo xx,1
+oxx oo xx,-1
+xo ox xo ,1
+xoxox xo ,1
+oo  xxx o,1
+oo xxxx o,1
+o   x  ox,1
+o  xx  ox,0
+o x  xxo ,1
+oox  xxo ,1
+ x x oxo ,0
+ xox oxo ,1
+x  oxxoxo,0
+x ooxxoxo,1
+x ooxxxoo,0
+xxooxxxoo,0
+o x  ox x,1
+o xo ox x,1
+xox  x o ,-1
+xox  xoo ,1
+xxo x o o,1
+xxo xxo o,-1
+ xo   x o,0
+xxo   x o,-1
+ oox x   ,1
+ oox x  x,-1
+o xxo o x,1
+o xxo oxx,0
+ox  oox x,1
+oxx oox x,-1
+ox       ,0
+ox     x ,-1
+o  x x  o,1
+o xx x  o,-1
+xx o  o x,1
+xx o oo x,1
+o xxoxox ,-1
+o xxoxoxo,-1
+oxx   xoo,1
+oxx x xoo,1
+x  oo  xx,-1
+x  ooo xx,-1
+ oxxx oxo,0
+ooxxx oxo,1
+xoxo o  x,1
+xoxo o xx,-1
+o   o x x,1
+ox  o x x,0
+ o   x xo,0
+ o   xxxo,-1
+  ox oxx ,-1
+ oox oxx ,1
+x xx oo o,1
+xxxx oo o,1
+xoxoo xx ,-1
+xoxoo xxo,0
+ xooxox  ,1
+ xooxoxx ,1
+     oxx ,-1
+o    oxx ,1
+o x oxxo ,1
+oxx oxxo ,-1
+ ox     x,1
+ ox   o x,1
+   o   x ,1
+x  o   x ,0
+x x o o x,1
+x x ooo x,1
+  xx  oo ,1
+ xxx  oo ,-1
+xx o ox o,1
+xx o oxxo,-1
+    oxox ,0
+   xoxox ,-1
+  xx o ox,0
+  xxoo ox,0
+ ox x o x,1
+ ox xoo x,1
+ oxxxo o ,1
+xoxxxo o ,1
+ xo xo ox,1
+xxo xo ox,1
+xox  x oo,-1
+xox xx oo,-1
+oxo  xxxo,-1
+oxo oxxxo,-1
+o x  x   ,1
+o xo x   ,1
+xo  xox  ,1
+xo  xoxo ,1
+x xxox oo,-1
+x xxoxooo,-1
+x ooo  xx,1
+xxooo  xx,-1
+   xxo o ,1
+   xxoxo ,1
+   xx o o,1
+   xxxo o,1
+ oxo x x ,0
+ooxo x x ,1
+ ox xxo  ,1
+ ox xxo o,1
+o x  o  x,1
+o xx o  x,0
+xx ox  oo,1
+xx ox xoo,0
+ox      x,0
+ oox  xxo,1
+xoox  xxo,1
+ xxox   o,1
+ xxoxo  o,1
+ xo x    ,0
+oxo x    ,1
+ x x ooox,1
+ x xxooox,0
+xx   oxoo,1
+xx x oxoo,1
+ x    xoo,1
+ x x  xoo,1
+oxx     o,1
+oxx   x o,-1
+ o x    x,0
+ o x o  x,1
+ xxxo o  ,0
+ xxxooo  ,1
+xoo xo x ,1
+xooxxo x ,-1
+xx oo  x ,-1
+xx oo  xo,1
+ x x oox ,0
+ox x oox ,1
+oo  xxox ,1
+oo  xxoxx,-1
+ oo xxx  ,-1
+ oo xxxo ,1
+x oxo  xo,1
+x oxo xxo,1
+xo oxxxo ,1
+ xoo ox x,1
+ xoo oxxx,1
+ xoxx o o,1
+ xoxxxo o,1
+ oxx  x o,1
+ooxx  x o,1
+xo x o x ,0
+xo x o xo,1
+ox  ox x ,-1
+ox  ox xo,-1
+oxxo  x o,1
+oxxo  xxo,-1
+  oxx    ,0
+  oxxo   ,0
+ o xoxx o,1
+ o xoxxxo,-1
+  o   oxx,1
+  o  xoxx,-1
+o o xx x ,-1
+o o xxox ,1
+xx  o o x,-1
+xx  o oox,1
+ xxxo o o,1
+ xxxo oxo,-1
+xo xx oo ,1
+xo xx oox,1
+o   x x  ,0
+o o x x  ,0
+oox    xx,1
+oox o  xx,1
+   x ooxx,0
+   xoooxx,0
+ox xox ox,0
+oxoxox ox,0
+ xxxoxo o,-1
+ xxxoxooo,-1
+o o  x xx,-1
+ooo  x xx,-1
+xo   xxoo,1
+xo  xxxoo,1
+ o  x  x ,0
+ o  xo x ,1
+xo  xo   ,1
+xox xo   ,1
+ oxxo   x,-1
+ooxxo   x,1
+ o  oxx x,-1
+ o ooxx x,1
+oxx o    ,0
+   ox    ,1
+   ox  x ,1
+oo  xx x ,-1
+oo  xx xo,1
+oxxx xoo ,-1
+oxxx xooo,-1
+x x ox o ,-1
+xox ox o ,-1
+oox     x,1
+ooxx    x,1
+     o xx,1
+o    o xx,1
+xx  x oo ,-1
+xx ox oo ,1
+oxo x   x,0
+oxo x  ox,0
+ox  o xx ,-1
+ox  o xxo,-1
+ooxxx  o ,1
+ooxxxx o ,1
+ox  x   o,1
+ox  x x o,1
+ o   x  x,-1
+ o   xo x,1
+o ooxxxox,0
+oxooxxxox,0
+ o x   x ,0
+ o x o x ,1
+   xoox  ,1
+x  xoox  ,1
+    x    ,0
+  o x    ,0
+oxx oo x ,-1
+  xx   o ,0
+o xx   o ,1
+  xx ox o,1
+  xxoox o,1
+oxxoxx oo,1
+oxxoxxxoo,1
+o    xox ,-1
+o x  xox ,-1
+  xxox o ,-1
+o xxox o ,1
+ xxoo oxx,-1
+ xxooooxx,-1
+   xxo ox,0
+  oxxo ox,1
+x ooxxox ,1
+o  oxxx  ,0
+o  oxxxo ,1
+x  xo    ,0
+x oxo    ,1
+   xxoxoo,1
+x  xxoxoo,1
+ox  o x  ,0
+ox  oxx  ,-1
+ xxo    o,1
+ xxo   xo,1
+o o xxx o,1
+o o xxxxo,-1
+x oxo   x,-1
+xooxo   x,1
+x ox x  o,1
+x ox xo o,1
+xx oxoxoo,1
+  o x x  ,0
+  o x x o,0
+ oxox  x ,0
+ oxox ox ,0
+  o  o xx,1
+  o  oxxx,1
+o xo  x x,1
+ooxo  x x,1
+ oxo xx o,1
+ xxo  o x,-1
+ xxo  oox,1
+xo  x  o ,1
+xo  x xo ,1
+ xooxxxo ,0
+oxooxxxo ,0
+ o  x  ox,1
+ ox x  ox,1
+x x   o  ,1
+x x  oo  ,1
+     xxo ,0
+    oxxo ,0
+x  oxx o ,0
+x  oxxoo ,1
+x   o x o,1
+x x o x o,1
+  x  o   ,1
+  x  o x ,0
+ xo oxx  ,0
+ xoooxx  ,0
+x x xo  o,1
+xox xo  o,1
+ox   x   ,-1
+ox o x   ,1
+o oxx  ox,1
+    x  o ,1
+    x xo ,1
+ oxx  xo ,-1
+ oxx  xoo,1
+oxxx  o  ,-1
+oxxxo o  ,0
+xxo x   o,-1
+xxo x  oo,-1
+  xo o x ,1
+x xo o x ,-1
+xx o xoxo,1
+xxoo xoxo,1
+   o x ox,1
+  xo x ox,1
+   o  xx ,1
+ o o  xx ,1
+oox xx   ,1
+oox xxo  ,1
+o  x  ox ,1
+o  xx ox ,1
+   o x   ,0
+  xo x   ,0
+ x   ooxx,-1
+ox   ooxx,1
+o xx   ox,0
+o xxo  ox,1
+oxxxo  o ,0
+oxxxox o ,-1
+  x ox  o,0
+  x ox xo,-1
+xo  x x o,1
+xo  x xoo,1
+ o  x xxo,-1
+ o ox xxo,1
+x ox xoo ,1
+xxox xoo ,-1
+ ox  x o ,1
+ ox xx o ,1
+o x    x ,0
+o x    xo,1
+ ooxx  x ,-1
+oooxx  x ,-1
+ xx o xo ,0
+ xx ooxo ,1
+oxx  xo  ,-1
+oxx  xoo ,1
+  x ooxox,-1
+x x ooxox,-1
+   xo x o,1
+   xo xxo,-1
+ x oxx oo,0
+ xxoxx oo,-1
+x o oxx o,1
+x oxoxx o,1
+oox xo xx,0
+oox xooxx,0
+ xxoxo o ,1
+ xxoxo ox,1
+o xx  oxo,1
+o xx xoxo,-1
+x o  x   ,0
+x o  x o ,1
+x o    ox,1
+xxo    ox,0
+x o  xo x,-1
+x o  xoox,1
+ x   xoo ,1
+ x  xxoo ,-1
+xoxxxoo  ,0
+xoxxxoo o,0
+oxx  xxoo,-1
+oxx oxxoo,-1
+   xoo xx,0
+  oxoo xx,1
+ox   xo x,-1
+ox  oxo x,1
+xoxox ox ,0
+xoxoxoox ,1
+xo xo   x,-1
+xo xo o x,-1
+ oo xx   ,1
+ ooxxx   ,1
+xxxoxoxoo,1
+xx ooxx o,0
+xxoooxx o,0
+   oxxo x,-1
+ o oxxo x,1
+o  x   x ,-1
+o  x   xo,1
+   x xoxo,-1
+ o x xoxo,1
+  o   xxo,-1
+  o  xxxo,-1
+  oo   xx,1
+ xoo   xx,1
+ ox  xo  ,1
+xox  xo  ,0
+ xx xo  o,1
+ o  xxo x,1
+oo  xxo x,1
+ ooxx x  ,-1
+ ooxxox  ,1
+ oxxx  o ,1
+o xxoo x ,0
+o xxooxx ,-1
+xx  ooo x,1
+xx xooo x,-1
+o xxo   x,0
+o xxoo  x,0
+  o x  xo,1
+  o xx xo,1
+   ox oxx,-1
+   oxooxx,1
+ x   xo o,-1
+ xx  xo o,-1
+ xo x  ox,0
+x  oo x  ,0
+xx oo x  ,-1
+oxoxox  x,-1
+oo xx x  ,-1
+oooxx x  ,-1
+x x   o o,1
+x  xoo x ,0
+x oxoo x ,1
+xoxo  xo ,1
+  xo o xx,-1
+  xo ooxx,-1
+oxxoo  x ,-1
+oxxoo xx ,-1
+xx   o  o,1
+xx  xo  o,-1
+x x o   o,1
+x x ox  o,0
+oox   oxx,1
+ooxx  oxx,0
+xx oox xo,0
+xx ooxoxo,1
+  xo ox  ,1
+ xxo ox  ,-1
+     o x ,1
+   x o x ,0
+  oxox   ,-1
+  oxox x ,-1
+oxo xxo x,-1
+oxooxxo x,-1
+ xoo  oxx,1
+ xoo xoxx,-1
+  o oxx  ,0
+x o oxx  ,0
+x   o o x,1
+x   oxo x,-1
+o xo   x ,1
+   xo  ox,0
+ x xo  ox,0
+x    xoox,1
+x   oxoox,1
+    x oox,1
+    xxoox,1
+ xxo o   ,1
+ xxoxo   ,1
+ x  o  ox,1
+xx  o  ox,0
+  ox xoxo,1
+x ox xoxo,-1
+o o  xx  ,0
+o o  xx x,-1
+oxxox x o,1
+ox    x  ,0
+oxo   x  ,1
+x  o x  o,0
+x xo x  o,0
+ox x o   ,0
+ox x ox  ,-1
+xo  o x  ,1
+xo  o xx ,1
+  o  xx o,1
+  o xxx o,0
+ xo o  x ,-1
+ xo ox x ,-1
+x  x xoo ,-1
+xo x xoo ,1
+ ox    x ,0
+ ox    xo,0
+x x oox  ,-1
+x xooox  ,-1
+  oo xx  ,0
+  oo xx x,0
+ o oxx ox,1
+ oxoxx ox,1
+ ox x o  ,1
+ oxxx o  ,0
+   oxo  x,1
+ x oxo  x,1
+oox  ox x,1
+ooxx ox x,1
+oo x   x ,1
+oxoxx  ox,0
+oxoxxo ox,0
+ x  o  xo,-1
+ x  o xxo,-1
+x o   x  ,1
+x o   xo ,1
+ oo xo xx,1
+ ooxxo xx,-1
+xoo  x xo,1
+xoo xx xo,0
+o x x  xo,1
+x xo xo o,1
+o  x  xxo,-1
+oo x  xxo,-1
+xxoo  oxx,-1
+xxooo oxx,-1
+xx  xoo  ,1
+xx  xoo o,1
+o   xx o ,1
+o   xxxo ,1
+xxo   o x,-1
+xxo o o x,-1
+xo o   x ,1
+xoxo   x ,0
+x o x    ,0
+x o x   o,0
+oo  x x x,-1
+oo  xox x,1
+ x       ,0
+ x o     ,1
+xo  xxo  ,1
+xo  xxoo ,1
+ xxo     ,-1
+xo     ox,1
+xox    ox,-1
+ x  x o  ,0
+ xo x o  ,1
+   xx oox,1
+o  xx oox,1
+oxoxxo  x,0
+oxoxxoo x,1
+   x ox o,1
+   xxox o,-1
+xo oo  xx,1
+xo oo xxx,1
+ o x ox  ,1
+  oxx  o ,1
+x oxx  o ,1
+ xo x x o,-1
+xo   xoox,1
+xox  xoox,1
+ o oxo xx,1
+xo oxo xx,1
+oxox o  x,1
+oxox o xx,1
+ x  x oo ,0
+xx oo  ox,1
+ x    oox,1
+xx    oox,1
+x     x o,1
+x    ox o,1
+ox xx   o,1
+oxoxx   o,1
+x oo x x ,0
+x ooox x ,0
+ xo o x  ,0
+ xo o xx ,-1
+ x  oo xx,-1
+ x   ox o,1
+ xx  ox o,1
+ o oxx xo,0
+ oxoxx xo,0
+xoxoxx o ,1
+xoxoxxoo ,1
+ oxx xo o,1
+ oxxxxo o,1
+ oxxx   o,1
+ oxxx o o,1
+o oxxo x ,1
+o oxxo xx,-1
+ xx ox oo,1
+xxx ox oo,1
+ oo  xxx ,-1
+ oo oxxx ,1
+   x xxoo,1
+   xoxxoo,1
+ o   ox x,1
+ ox  ox x,1
+x   o xxo,0
+x o   xxo,-1
+x oo  xxo,0
+o    xx o,1
+o  x xx o,-1
+ox   xxo ,0
+ox   xxoo,1
+  ox ooxx,1
+ xxoo  xo,1
+ xxoo xxo,-1
+o ox x x ,-1
+o oxox x ,-1
+oxxxo ox ,-1
+x o o  x ,1
+x oxo  x ,-1
+ x ox    ,1
+ o   xoxx,-1
+oo   xoxx,1
+oxxx oxo ,0
+oxxx oxoo,1
+xx     o ,0
+   xx  oo,1
+ x xx  oo,-1
+x   ox xo,0
+x o ox xo,0
+xooo xx  ,1
+xooo xxx ,0
+o  xooxx ,1
+o  xooxxx,1
+xx ooxxoo,1
+xxxooxxoo,1
+   xo xox,-1
+o  xo xox,0
+xo  xox o,1
+oxo ox x ,-1
+   o xx o,0
+   oxxx o,0
+o xx o x ,0
+o xx oox ,0
+o  o  xx ,1
+ox o  xx ,1
+ o    xx ,0
+ o  o xx ,1
+ox  x  ox,0
+ox ox  ox,0
+xx   o   ,-1
+xx   oo  ,1
+ox  xxo  ,-1
+ox oxxo  ,-1
+ xoxoo x ,-1
+ xoxoo xx,-1
+ xoox oxx,1
+ o    oxx,0
+ ox   oxx,0
+ oxo x   ,1
+xo x   o ,1
+xo xx  o ,1
+  o ox x ,0
+ x o o xx,-1
+ x ooo xx,-1
+x  oxx oo,0
+ox  xo ox,0
+ox xxo ox,0
+x   xo  o,1
+   x o xo,1
+x  x o xo,-1
+ x o   ox,1
+xx o   ox,1
+ x  o x  ,0
+ x  o x o,1
+x   ooxox,1
+xx  ooxox,-1
+xo  x    ,1
+xo  x   o,1
+o xx ox  ,0
+ooxx ox  ,1
+ oxx  oox,1
+ oxx xoox,1
+ o    x  ,1
+  o    x ,1
+  ox   x ,-1
+oxoox   x,1
+oxooxx  x,-1
+ox xx oo ,1
+ox xx oox,0
+xo    o x,1
+xo  x o x,1
+x  xox  o,-1
+x  xox oo,1
+ ox oox x,1
+ ox ooxxx,1
+ oxxxo  o,1
+ oxxxo xo,0
+ oxo ox x,1
+ oxoxox x,1
+x xxooo x,0
+x  oo x x,-1
+xo oo x x,1
+x xoox  o,1
+   oo x x,1
+   oo xxx,1
+o  xx xoo,1
+ox xx xoo,1
+  xoxo   ,1
+  xoxox  ,1
+xo x ooxx,0
+xoox ooxx,1
+ o  x x  ,1
+ oo x x  ,1
+ x x o  o,1
+ x xxo  o,-1
+  xoo  x ,0
+  xoo xx ,-1
+ox   xox ,-1
+ox o xox ,-1
+x  xo  ox,-1
+x x  oo x,1
+  x  o  x,0
+o  x ox  ,0
+o  xxox  ,-1
+ xoox    ,1
+ xooxx   ,0
+ oxox    ,1
+ oxoxx   ,1
+ oxx     ,0
+ oxx   o ,1
+  x ox   ,0
+ ox ox   ,1
+x oo   x ,1
+  xo oxx ,-1
+  xoooxx ,-1
+ xxx o oo,1
+xxxx o oo,1
+oxoo  x x,1
+oxoox x x,0
+o xoo x x,1
+oxxoo x x,-1
+ o x ox x,1
+oo x ox x,1
+oox  x   ,1
+oox  x x ,1
+ xo    xo,1
+ xo  x xo,-1
+o x  oxox,1
+o x xoxox,1
+ xo  ox  ,1
+ xo  oxx ,-1
+ xoxo xo ,1
+ xoxo xox,0
+ox xx o o,1
+ox xx oxo,1
+  xooxox ,1
+  xooxoxx,1
+x x    oo,1
+xxx    oo,1
+xx  o  xo,-1
+xx  o oxo,1
+xoo oxxx ,1
+xoo oxxxo,1
+x o ox x ,-1
+xx xoxoo ,-1
+xx xoxooo,-1
+oo xox x ,-1
+ooxxox x ,-1
+  x xo  o,1
+      ox ,0
+x     ox ,0
+oxx  o xo,1
+oxx  oxxo,-1
+ xo    x ,-1
+ xoo   x ,1
+o   x    ,0
+o   x   x,0
+oxoxooxx ,1
+oxoxooxxx,1
+xo       ,1
+xo  xxoxo,0
+xoo xxoxo,1
+ x o   xo,1
+xx o   xo,1
+ x oxoxo ,1
+ xxoxoxo ,1
+x oo   xx,1
+ x  xo   ,1
+ x  xo o ,1
+ x   o ox,1
+ x  xo ox,0
+oox  oxx ,1
+oox  oxxx,1
+xo  oxo x,1
+xo  ox   ,0
+xo  ox  x,-1
+oo xxox  ,1
+xo oxx o ,1
+ox o ox x,1
+ox oxox x,1
+ xxxoo ox,0
+oxxxoo ox,0
+ooxxx  xo,1
+ooxxxo xo,1
+oo xxooxx,0
+ooxxxooxx,0
+o xx  oox,1
+x x oo x ,-1
+xox oo x ,0
+xx x  o o,-1
+xx x oo o,1
+    o xxo,0
+x    oox ,1
+x x  oox ,0
+oo    xx ,1
+oo    xxx,1
+oxxx ox o,-1
+oxxxoox o,-1
+    xoxo ,1
+ x  xoxo ,0
+xo  xoox ,1
+xox xoox ,0
+  o oxx x,0
+ o  oxxx ,0
+ ooxox  x,-1
+  oooxx x,1
+ xoooxx x,0
+x xo  xo ,1
+x xoo xo ,1
+ oox  oxx,-1
+xoox  oxx,-1
+ x xo  o ,1
+ xxxo  o ,0
+oo xxox x,-1
+ ox oo xx,1
+xox oo xx,-1
+   ox xxo,1
+  oox xxo,1
+ xo xx  o,1
+ xo xx oo,1
+x x  o xo,1
+x xo o xo,1
+ xo  ox x,1
+oxo  ox x,1
+ox o xx  ,1
+ox ooxx  ,1
+   xxo  o,0
+x  xxo  o,-1
+x x    o ,1
+x xo   o ,1
+oxo xx   ,1
+x xo xoo ,1
+x xo xoox,1
+ xoxo x  ,0
+ xoxoox  ,1
+ x ox  o ,1
+ x xx ooo,-1
+ox  xxo o,1
+ox xxxo o,1
+o  xxoxox,0
+oo xxoxox,1
+xoxx    o,0
+xoxx o  o,1
+o xx xxoo,-1
+ooxx xxoo,1
+x xx ooox,1
+xoxx ooox,1
+   x  x o,1
+ o x  x o,1
+x xo  oxo,1
+x xox oxo,0
+ooxx o  x,1
+ xo     x,0
+oxo     x,1
+o xxo  x ,-1
+o xxo ox ,0
+  xxo    ,0
+  xxo  o ,0
+xoo   x  ,1
+     oxxo,-1
+   x oxxo,-1
+oo  oxxx ,1
+ o  o x x,1
+xo  o x x,-1
+x oox ox ,1
+x oox oxx,1
+o xoo xxx,1
+ xxx oo o,1
+ xxxxoo o,-1
+ x oox  x,0
+ xooox  x,0
+o oxx xxo,-1
+oooxx xxo,-1
+oxo  x xo,1
+oo  xxxo ,1
+ o  x    ,1
+ o xx    ,1
+  x xxo o,-1
+ o o xx  ,1
+xo o xx  ,0
+ox o xxo ,1
+xox   oox,1
+xoxx  oox,-1
+  oo  xxx,1
+oo xx   x,-1
+oooxx   x,-1
+xx ooxo x,-1
+xx ooxoox,1
+x oo xx o,0
+x ooxxx o,0
+  x x  oo,1
+  xxx  oo,-1
+  x xo o ,1
+ xx xo o ,1
+x   xox o,-1
+ ox xx  o,1
+xxo   xoo,1
+ox xo ox ,-1
+ox xo oxx,-1
+x  x  o o,-1
+x  xx o o,-1
+ox x xo o,1
+oxxx xo o,-1
+  xoxx o ,1
+ oxoxx o ,1
+oox xx  o,1
+oox xxx o,1
+ox x oxxo,-1
+oxox oxxo,-1
+xooxx  xo,-1
+xooxx oxo,1
+  xo  o x,1
+  xox o x,-1
+x ox oo x,1
+x oxxoo x,1
+xoxxo o x,-1
+xoxxo oox,-1
+ x  oxoxo,-1
+xx  oxoxo,-1
+x   oxox ,-1
+x o oxox ,-1
+ox o    x,1
+  ooxx  x,-1
+  ooxxo x,1
+xoo   xxo,1
+xoo x xxo,-1
+ o o x xx,1
+ o oox xx,1
+o o x oxx,1
+o o xxoxx,-1
+oxox ox  ,0
+oxoxxox  ,-1
+x   x oxo,0
+x o x oxo,1
+xx  oo   ,1
+xx  oo  x,-1
+ox xoo  x,0
+oxxxoo  x,0
+xoxx   o ,-1
+  xo o  x,1
+x xo o  x,-1
+x o xxoox,1
+ x xo ox ,-1
+ xoxo ox ,-1
+o   xxoxo,1
+ox  xxoxo,1
+ x o oxx ,-1
+ x oooxx ,-1
+x o xx  o,0
+x ooxx  o,0
+o xxox  o,-1
+ ox x    ,1
+ ox x  o ,1
+ ox o x  ,0
+ ox o xx ,0
+         ,0
+o oxo x x,1
+oxoxo x x,0
+o x  oxxo,1
+o x xoxxo,1
+ox oxx o ,0
+oxxoxx o ,-1
+x x ox oo,1
+    xo  x,1
+    xoo x,1
+xoxo     ,1
+xoxox    ,1
+oox   xxo,1
+oox  xxxo,-1
+ ooxxoxox,1
+xooxxoxox,1
+o xx oo x,0
+ ox o x x,-1
+o o oxxx ,1
+o o oxxxx,1
+  xo    x,1
+  xo   ox,1
+oxo x xox,0
+oxoox xox,0
+ooxxo xx ,-1
+ooxxo xxo,-1
+ oxxo o x,1
+ oxxoxo x,1
+xoxxooo x,0
+xoxxoooxx,0
+ x oo x  ,0
+oox x o x,1
+  o xox x,1
+ oo xox x,1
+ xooo xx ,1
+xo  ox xo,0
+xo  oxxxo,0
+oo xx  xo,1
+oo xx xxo,-1
+x o xoox ,1
+x o xooxx,1
+ox x o xo,1
+oxxx o xo,-1
+x x ooox ,1
+x xxooox ,0
+ xxoxooox,1
+  xxox  o,-1
+xx  oxoox,-1
+  x oxx o,-1
+ oxox o x,1
+oxxxxo  o,1
+oxxxxo oo,1
+ ooxoxx x,-1
+oooxoxx x,-1
+ o x oxx ,1
+ox oxxx o,1
+ox oxxxoo,1
+   o  x x,1
+o  o  x x,1
+ xxxooxo ,0
+ oxx oox ,0
+xoxx oox ,0
+ o o  x x,1
+o ooxx x ,1
+ox  xox  ,1
+ox  xoxo ,1
+x o   xox,1
+xoxooxox ,1
+xoxooxoxx,1
+  x   o  ,1
+  x   o x,1
+xxoxo    ,-1
+xxoxo o  ,-1
+ o xx   o,1
+ x xox oo,-1
+ x xoxxoo,-1
+xo    xxo,0
+xo  o xxo,1
+ x xo    ,0
+ox xo    ,0
+ o xox   ,-1
+ o xox x ,-1
+ oxxo oxx,0
+ oxxoooxx,0
+xooxxooxx,1
+xo o  x x,1
+ x  ooxxo,-1
+ x xooxxo,-1
+x  xo oox,-1
+x xxo oox,-1
+ o ooxxx ,1
+xo ooxxx ,0
+ o     x ,0
+o xoxx  o,1
+o xoxxx o,1
+  xx  o  ,0
+o xx  o  ,1
+ xx x oo ,-1
+    x o x,0
+oxo  xxo ,0
+xx  oo x ,-1
+xx  ooox ,1
+xo  xx oo,1
+o ooxxx  ,0
+oxooxxx  ,0
+o       x,1
+o  x    x,0
+ o  x ox ,0
+ o  x oxx,-1
+o xxxoo  ,0
+oxxxxoo  ,0
+ox  oxx o,-1
+ooxx x   ,1
+ooxxox   ,1
+xo    oxx,0
+xo o  oxx,1
+x x   oo ,1
+x x x oo ,-1
+oo x xxxo,-1
+x   oxoxo,0
+x x oxoxo,0
+x xoo x  ,-1
+x x  o o ,1
+x xx o o ,1
+xx  o    ,0
+o ooxx  x,-1
+o ooxx xx,-1
+oxoo xx  ,1
+ xooox x ,0
+ xooox xx,-1
+oxooxx ox,0
+ oox xo x,1
+ ooxxxo x,1
+ oxx o x ,0
+   x oxo ,1
+ oxxxoox ,0
+ x      o,1
+ x   x  o,-1
+ oox  xx ,-1
+ ooxo xx ,1
+o  xo  x ,0
+o  xox x ,-1
+ xoxo   x,-1
+ xoxo  ox,0
+       ox,1
+  x    ox,1
+ xo x o x,1
+   x   o ,1
+   x x o ,-1
+ xx o o  ,1
+ oxoxxo  ,1
+xoxoxxo  ,0
+o   x o x,0
+o   xxo x,-1
+xx x o oo,1
+xx xxo oo,-1
+xo x  o  ,1
+xo x xo  ,-1
+x o xo   ,1
+xxo xo   ,-1
+x ox o ox,1
+xxox o ox,1
+oxx  o   ,1
+oxxx o   ,0
+x x oo xo,1
+ x oo xx ,-1
+ x oo xxo,-1
+o xx  o x,0
+ooxx  o x,1
+  xo  xox,1
+ oxo  xox,1
+o  x x o ,1
+o  xxx o ,1
+   x   ox,0
+o  x   ox,1
+   ox xo ,1
+   ox xox,1
+ x oxx  o,0
+ xooxx  o,1
+ xx   o  ,-1
+ xx   o o,1
+o o    xx,1
+o o x  xx,-1
+   x  ox ,0
+   x  oxo,1
+  ox xxoo,1
+x ox xxoo,1
+  x o  ox,1
+x x o  ox,-1
+ x x   o ,0
+ox x   o ,0
+oxoo   xx,1
+oxoo  xxx,1
+   xooxxo,1
+ooxx   ox,1
+ooxxx  ox,1
+    xox  ,1
+o   xox  ,1
+ ox  x  o,1
+ ox  xx o,-1
+oo  xx ox,1
+oo xxx ox,1
+  oo x xx,-1
+  ooox xx,1
+    xoxox,1
+  o xoxox,1
+  ooxo xx,1
+  ooxoxxx,1
+x ooxx xo,0
+ xoxx o  ,1
+ xoxx oo ,1
+o  o xx x,1
+o oo xx x,1
+xoxxoo   ,1
+xoxxoox  ,1
+ oo xx xo,1
+ ooxxx xo,1
+x xxxo oo,-1
+x xxxoooo,-1
+xxoo x   ,0
+xxoo x  o,0
+o x x    ,0
+o xox    ,1
+    x xoo,1
+   xx xoo,1
+o  xx o  ,1
+ xx o ox ,-1
+xox  x  o,-1
+xox  xo o,0
+  xox ox ,-1
+  xox oxo,1
+ xxooxox ,-1
+ xxooxoxo,1
+o xox  x ,-1
+o xox ox ,-1
+x x oxo o,1
+   oxx o ,1
+ x oxx o ,-1
+xx    o o,1
+xx   xo o,-1
+  xo  xo ,1
+  xo xxo ,1
+   oxxoox,1
+xxo o  x ,-1
+xxo o  xo,-1
+xo    xox,-1
+xo   ox x,1
+xo  oox x,1
+ o xxo xo,0
+ o xxoxxo,-1
+ o  xooxx,1
+ ox xooxx,0
+ xoo xx o,0
+ xooxxx o,0
+x xxoooox,1
+ xo ox xo,-1
+ xo oxxxo,-1
+  oo  x x,1
+  o  x  x,-1
+  o ox  x,0
+ o xxoox ,0
+x oo  x  ,1
+x oox x  ,0
+ x  oox  ,0
+xx  oox  ,-1
+xoo xxx o,0
+xoooxxx o,0
+   o oxx ,1
+ xoo x  x,-1
+oxoo x  x,0
+o ox xox ,1
+o oxxxox ,1
+ o xoo xx,1
+xo xoo xx,0
+  oxo   x,1
+o oox  xx,1
+  oox  x ,1
+x oox  x ,1
+  oxo xxo,1
+ x x   oo,1
+ xxx   oo,-1
+ xx  x oo,-1
+oxx  x oo,-1
+x oox  xo,1
+ ooxo x x,1
+  oxx  ox,1
+ ooxx  ox,1
+ o oxox x,1
+ o oxoxxx,1
+oxo  oxx ,1
+  ox  xxo,-1
+xxx o oox,1
+ x    o  ,1
+ x    ox ,-1
+ o    xxo,0
+x   x o o,0
+x x x o o,-1
+     xo x,1
+     xoox,1
+x  x oo  ,0
+xx x oo  ,-1
+x    oxxo,-1
+oxx   o  ,-1
+oxx   o x,-1
+x ooxx   ,0
+x ooxx o ,1
+x  x xooo,-1
+oxx o o x,1
+oxx o oxx,-1
+o xo  xxo,1
+o xox xxo,1
+ x  oooxx,-1
+oxxooxox ,-1
+o xo  xox,1
+oxxo  xox,1
+ox  x o x,-1
+ox  xoo x,1
+x ox o  x,1
+x oxoo  x,1
+x      ox,0
+x     oox,1
+x oo xoxx,-1
+x oooxoxx,-1
+xx xo oxo,-1
+xxoxo oxo,-1
+     x   ,0
+x o      ,1
+x o     x,1
+ oxo oxx ,1
+ oxo oxxx,1
+ ox  x xo,0
+ oxo x xo,0
+oo   x xx,-1
+xoox o xx,1
+xooxoo xx,1
+o  xxx  o,1
+ ox   xxo,0
+o xo   xx,-1
+ooxo   xx,1
+ x  xoxoo,1
+xx  xoxoo,-1
+xox o o x,1
+xox oxo x,1
+    ox x ,0
+ o  ox x ,1
+xox    xo,0
+xox o  xo,0
+x   ox   ,0
+x   oxo  ,1
+o    x x ,-1
+  o xox  ,1
+x  oo  x ,0
+x xoo  x ,-1
+x   o oxx,-1
+x o o oxx,-1
+ x x oo  ,0
+ xxx oo  ,0
+x x     o,1
+ o  x o x,1
+x  oo oxx,-1
+ x ox xoo,1
+ xxox xoo,1
+o x     x,1
+ox oxoxox,1
+x   o  ox,0
+xx   xoo ,-1
+xx   xooo,-1
+xxoxo   o,1
+xxoxo  xo,-1
+ox xxoxoo,1
+ x  oxoox,1
+ xo ox  x,-1
+xx o    o,1
+xx o  x o,0
+  x     o,1
+  x   x o,1
+       x ,0
+    ox  x,0
+   oox  x,1
+   oxo x ,1
+x  oxo x ,1
+xxooxx o ,0
+xxooxxoo ,1
+    xox o,1
+xxo     o,-1
+xxox    o,-1
+xoox  ox ,1
+xooxx ox ,1
+    oox x,1
+  x oox x,-1
+  oox  xx,1
+xxo  x o ,-1
+xxo  xoo ,-1
+ xox ox  ,-1
+ o oxxxo ,1
+ o oxxxox,1
+ox x   ox,0
+ xxxoxoo ,-1
+oxxxoxoo ,1
+xxxo oo x,1
+x xo ox o,1
+x xoxox o,1
+ xo  o xx,1
+ xoo o xx,1
+x  xxoo o,-1
+x xxxoo o,-1
+xx   ooxo,1
+xx x ooxo,-1
+ oxx oxo ,1
+xoxx oxo ,1
+ xx oo  x,-1
+ xx ooo x,1
+ xoxxoo  ,1
+ xoxxoox ,1
+xo   oxox,1
+  xxooxo ,1
+  xxooxox,-1
+ox    x o,1
+xo  o  x ,1
+xo  o  xx,0
+ oo oxxxx,1
+ ox o   x,1
+xooxx   o,1
+xooxxx  o,1
+oxox ooxx,1
+ xo x xo ,0
+ xo xoxo ,0
+x xx  oo ,-1
+xoxx  oo ,-1
+ o  xx xo,0
+ooxx o xx,0
+ooxx ooxx,0
+x ooxo x ,1
+xxooxo x ,1
+ooxxxoxox,1
+xx oo xxo,-1
+   xox xo,-1
+o  xox xo,-1
+    o xx ,0
+   oo xx ,1
+ oo  xx  ,1
+   xo xo ,1
+ x xo xo ,0
+ xxoo ox ,1
+ o    xox,1
+ ox   xox,-1
+xxo  xoox,-1
+xo xoxo  ,-1
+xo xoxox ,-1
+o  x o  x,0
+o  x o xx,0
+xoxoxx oo,1
+  xo x o ,1
+oo x x x ,-1
+ oo xxxox,-1
+ oooxxxox,1
+ x xooox ,0
+xxoo   ox,1
+xxoo x ox,0
+o  x ox x,0
+o  x oxox,0
+  xo oxox,1
+ xxo oxox,-1
+o xx ox o,1
+ o x xxo ,-1
+oo x xxo ,1
+ o   xxo ,1
+ o  xxxo ,1
+o  x  x  ,-1
+o ox xx o,1
+o ox xxxo,-1
+x xxo  oo,1
+xx  oxoo ,1
+x oo  oxx,1
+o  xoxoxx,-1
+oo xoxoxx,1
+ x o oxxo,1
+ xoxx oox,1
+xxo x o  ,1
+xxoox o  ,1
+ooxxo  xx,1
+   xxoo  ,0
+  xxxoo  ,0
+oo xoxxx ,-1
+oo xoxxxo,-1
+x o   oxx,-1
+  oxxox  ,-1
+  oxxoxo ,1
+x  xoo   ,1
+xx xoo   ,1
+xoo  x  x,-1
+xoo ox  x,-1
+  oo xxx ,0
+o oo xxx ,1
+o x  xoxo,-1
+x xooo x ,-1
+o   x x o,1
+o  xx x o,1
+xx  o  o ,1
+oxxx   o ,-1
+oxxx o o ,0
+xo xx o  ,1
+xooxx o  ,1
+oxx xo o ,1
+oxx xoxo ,1
+oo   x  x,1
+oox  x  x,1
+xooo x xx,1
+xoooox xx,1
+   xo ox ,0
+    o x x,0
+    o xox,0
+xx xo o o,1
+xxxxo o o,1
+x     o  ,1
+x  x  o  ,-1
+ x x x oo,-1
+ x x xooo,-1
+x  xoo xo,1
+x xxoo xo,1
+ o x xx o,1
+ xxox  o ,1
+    x   o,0
+x  ox   o,1
+x  ox x o,0
+xx   oox ,1
+o  xxooxx,0
+oxx  xo o,-1
+   o  xxo,1
+x  o  xxo,-1
+xo  xoxox,1
+xxo xoo  ,1
+ox x o x ,0
+   oxoxx ,1
+ o oxoxx ,1
+  o x xxo,-1
+o o x xxo,1
+o xo oxx ,1
+o xoxoxx ,1
+ox xxo   ,0
+ox xxoo  ,1
+x  x   o ,-1
+x ox   o ,1
+ xxxoox o,-1
+  o  ox x,1
+ xx  o o ,1
+  ox ox  ,1
+o  x xox ,-1
+   xo  xo,0
+  xxo  xo,-1
+ox  o   x,0
+ox xo   x,0
+o oxxxx o,1
+xo   o x ,1
+xo   o xx,1
+xx oox   ,0
+xx ooxo  ,1
+   xo o x,0
+   xoxo x,-1
+  xooo xx,-1
+xxooo x  ,0
+xxooo xx ,-1
+xoxx xo o,-1
+xoxxoxo o,0
+oo    x x,1
+oox   x x,1
+oxxox  ox,-1
+oxxoxo ox,1
+  x  oxo ,1
+  xx oxo ,1
+ oxxxo   ,0
+o ox xoxx,-1
+ xx oxoox,1
+x   x  oo,1
+x   xx oo,-1
+x   x   o,0
+ o x  xo ,1
+ o x  xox,-1
+ ox  o  x,1
+xox  o  x,-1
+ xo o xxo,-1
+  oxxxxoo,1
+oo xx    ,1
+ox   xo  ,-1
+ xoox  x ,1
+x  xxo oo,1
+x x  o ox,1
+x x oo ox,1
+o x    ox,1
+o  x  oxx,-1
+ o xox  x,-1
+ o xoxo x,1
+  oxox ox,-1
+  oxoxxox,-1
+x o  x ox,-1
+ xx  o   ,1
+oo x   xx,-1
+oo x o xx,1
+   xox   ,-1
+x oox x o,0
+  xxo oox,1
+ xxxo oox,1
+ oxx   ox,-1
+xxoo  x  ,-1
+xxoo  xo ,0
+xxooxox  ,-1
+xxooxoxo ,1
+  xxoox  ,0
+o xxoox  ,0
+oo   xx  ,1
+oo  xxx  ,-1
+o o xo xx,1
+o o xoxxx,1
+ xx oo xo,1
+ xx ooxxo,-1
+x o  xox ,-1
+   o x x ,0
+ o xxox o,1
+ oxxxox o,1
+ oo  xxxo,0
+ oox xxxo,-1
+xo x xoox,-1
+x  xoxo o,-1
+x o o   x,1
+ xxo x  o,-1
+ xxoox  o,1
+ xx xoo  ,1
+ xxoxoo  ,1
+ xx  ooxo,1
+ xx xooxo,1
+o   oxoxx,1
+o x oxoxx,1
+  xox  ox,1
+  xoxo ox,1
+ ox  o x ,1
+ ox xo x ,0
+xxo oo x ,-1
+ xoxxo ox,0
+o x   o x,1
+o x x o x,-1
+xoox  x  ,1
+ o x oxxo,1
+   oxxxoo,1
+ x oxxxoo,0
+ x  ox o ,1
+ xx ox o ,1
+x  o  ox ,1
+xox o  x ,0
+xox o ox ,0
+x  xo xo ,1
+x x oox o,1
+xoox    x,1
+xoox   ox,1
+x  o xo  ,1
+x  oxxo  ,0
+x  ox  o ,1
+ xox ox o,-1
+ xoxxoxo ,-1
+xx  o o  ,1
+xx  o ox ,-1
+   x oxox,0
+ o x oxox,1
+oo x  x  ,-1
+oo x  xx ,-1
+xo   xox ,0
+xo   xoxo,0
+ xxx  o o,-1
+oxxx  o o,-1
+xoxo o x ,1
+  xx o   ,0
+  xoxxoxo,-1
+xx xox oo,-1
+oxo  xx o,1
+xx   oxo ,1
+xxo  oxo ,1
+ox   ox  ,1
+oxx  ox  ,-1
+oxxx    o,-1
+oxxx   oo,-1
+ooo xxoxx,-1
+x  xxoo  ,-1
+oxxxoo   ,0
+oxxxoox  ,-1
+xxoox xo ,0
+xxoox xoo,0
+ xox  xoo,1
+  o xx ox,1
+ oo xx ox,1
+  oxx ox ,1
+ ooxx ox ,1
+ x  o ox ,-1
+xxo  o x ,-1
+xo xo  ox,-1
+x o xox  ,-1
+x o xox o,-1
+oxox xo x,-1
+oxox xoox,1
+o   o  xx,1
+o x o  xx,1
+  ox   ox,1
+ x x  o o,-1
+ x x  oxo,-1
+xoox x  o,1
+x   ooxxo,1
+xoo  x   ,1
+xoox x   ,1
+    x x o,0
+ooxxxo  x,0
+ooxxxo ox,1
+  oo  xx ,1
+  x  oo x,1
+o  xoxx o,-1
+xoxxo  xo,0
+   xoxoox,1
+oxx oooxx,0
+  oxoxx  ,-1
+  oxoxx o,1
+ x  o xo ,1
+oxo xox  ,1
+xo  ox x ,0
+o xo xxox,1
+  x  o xo,1
+o oxx x  ,-1
+ xxx ooox,0
+ xxxoooox,1
+ o   oxx ,1
+ o   oxxx,1
+    ox ox,1
+  x ox ox,1
+o  xo   x,0
+o  xo x x,0
+oxoxxx  o,1
+ o  x xox,1
+oo  x xox,1
+xoxoo oxx,1
+ xo   xo ,0
+ xo  xxo ,0
+ xxoxoox ,1
+  xxox oo,-1
+ xxxox oo,-1
+xo x x o ,-1
+xoox x o ,1
+   xxoox ,0
+o  xxoox ,1
+oxxxx oo ,-1
+oxxxx ooo,-1
+oxox     ,1
+oxox    x,0
+oox x oxx,-1
+xoox   x ,1
+xooxo  x ,1
+xooo xx x,1
+  x   oxo,1
+ xx   oxo,1
+xo xoooxx,0
+   xo    ,0
+   xo x  ,0
+ x o  x  ,0
+o x  o x ,1
+oxx  o x ,-1
+o o x xx ,-1
+x o x x o,-1
+xoo x x o,1
+ox xxoxo ,0
+xxo  o ox,1
+ o o xx x,1
+x  oxoxo ,1
+x  oxoxox,1
+ ox  xoxo,0
+xox  xoxo,0
+xx xoooxo,1
+xxxxoooxo,1
+o  xo  xx,0
+oo xo  xx,1
+   oxxo  ,0
+   oxxox ,-1
+     x xo,0
+   o x xo,0
+ xxx o o ,0
+x xoxo   ,1
+ x xox  o,-1
+ox xox  o,-1
+o    x xo,1
+   x x oo,1
+xo oxx  o,0
+xo oxx xo,0
+ox  o oxx,-1
+  xx oo  ,0
+  xoo xox,1
+xox      ,0
+xox   o  ,1
+x x xo o ,1
+x x xooo ,1
+o o oxx x,1
+oxo oxx x,0
+   xox  o,-1
+   xoxx o,-1
+xoo x  xo,0
+xo oxxox ,0
+xoooxxox ,1
+o  x oxxo,-1
+o o xxx  ,-1
+o o xxxo ,1
+ox x     ,0
+ox x    o,1
+  ox o xx,1
+xo xoxo x,-1
+xxooxx oo,0
+oo x    x,1
+oo x x  x,-1
+oxxo oxox,1
+oxxoxoxox,1
+  ox  x  ,-1
+ xoox xxo,1
+xox xxo o,-1
+ ox xxoxo,0
+xoxo  oxx,1
+ox xoox  ,0
+  x  xoxo,-1
+ o  x x o,1
+ ox x x o,1
+ xoox xox,0
+ oo  x  x,-1
+ x o  o x,1
+ x ox o x,-1
+x  ox xo ,1
+ o xo  xx,0
+  o xxoxo,1
+x o xxoxo,1
+ xoxoo  x,1
+ xoxoox x,1
+ o x     ,1
+x o ox ox,-1
+xxo ox ox,-1
+oo x xox ,1
+oo x xoxx,-1
+   ox x  ,1
+ooxx o x ,1
+ o      x,1
+ o    x x,1
+x xoo  ox,1
+xxxoo  ox,1
+  xxo  ox,-1
+  xx o o ,1
+  xxxo o ,0
+xxo o    ,0
+o ox  xx ,-1
+o oxo xx ,1
+xo oox  x,1
+xoxoox  x,1
+ox xoxoox,1
+oxxxoxoox,1
+xxo xoxo ,-1
+  oxxoo x,1
+  oxxooxx,1
+ x xoo x ,-1
+ox xoo x ,0
+ oxx ox  ,1
+  x oooxx,0
+ xx oooxx,-1
+ox    xxo,-1
+ox o  xxo,1
+xox x  o ,1
+xoxox  o ,1
+xx o  xoo,1
+xx o xxoo,0
+oxoxo  x ,-1
+oxoxox x ,-1
+    oo xx,1
+    ooxxx,1
+oo x xo x,1
+o xo  xx ,1
+xo ox  xo,0
+xoxox  xo,0
+ o  xoxxo,1
+ ox ox xo,0
+oxxx  oxo,-1
+oxxxo oxo,-1
+x xooxoxo,1
+xxxooxoxo,1
+xx o   o ,1
+xx o x o ,0
+x  x  oo ,-1
+x  xx oo ,-1
+oxoxx  xo,1
+oxo   xox,0
+ o xo  x ,1
+xo xo  x ,0
+ oo x  x ,0
+ xo  o  x,1
+ xox o  x,1
+  o  xox ,1
+  ox xox ,-1
+  xxoxoo ,1
+xoox xo  ,1
+xoox xo x,-1
+xox  oxox,-1
+xoxo oxox,1
+ xo  xx o,0
+xo o ox x,1
+x xo x oo,1
+xxxo x oo,1
+   x xo o,1
+  ox x ox,-1
+  ox xoox,1
+ xo    ox,0
+oxox x xo,-1
+oxox xoxo,1
+      x o,1
+ox x ox o,-1
+ox xxox o,-1
+  xxx oo ,-1
+  xxxooo ,0
+oxxxo  ox,0
+ xo x  o ,0
+xxo x  o ,-1
+ox  o  xx,-1
+ xxo  x o,1
+ xxo  xoo,1
+xx xo   o,1
+xx xo  oo,1
+   ox  xo,1
+  xo     ,1
+  xo  x  ,0
+x x o xo ,-1
+x x o xoo,1
+ oxxoxox ,0
+ooxxoxox ,1
+ o xxo x ,-1
+   oxo xx,1
+  x oxxoo,-1
+ xx oxxoo,-1
+ox    o x,0
+ox x  o x,0
+xx  ox oo,1
+x  oox  x,0
+x ooox  x,0
+oo oxx  x,1
+oo oxxx x,-1
+ x   xxoo,1
+ x  oxxoo,1
+xoxo x o ,1
+ox xoxox ,-1
+oxoxoxox ,-1
+xx xoooox,1
+  x o   x,0
+ xoo x x ,0
+x  oxoox ,1
+xoxo  o x,1
+xoxo xo x,1
+oo x x ox,1
+ooxx x ox,1
+ o xo x x,-1
+ o xoox x,1
+xo  o   x,0
+o ox xxo ,1
+oxox xxo ,0
+xxox x oo,-1
+xxox xooo,-1
+xxo oo  x,-1
+xxo oo xx,-1
+    x  xo,0
+o   x  xo,1
+  o   xx ,-1
+x  xo   o,1
+ xox   ox,0
+oxox   ox,0
+xo   xo  ,1
+  xxoo   ,1
+x ox  xo ,1
+xoxoo   x,1
+xoxoo x x,-1
+ xo x   o,1
+ xo x  xo,1
+ xooxo xx,1
+  xxo xoo,1
+x xxo xoo,1
+xxox  oox,-1
+xxoxo oox,-1
+x xxoo o ,1
+xxoooxx  ,0
+xxoooxxo ,0
+ o  oxx  ,0
+    ox   ,0
+ oxx ox o,1
+ xoo x xo,1
+xxoo x xo,0
+x  o x o ,1
+x  o x ox,1
+o o   xx ,1
+oox   xx ,1
+oox o xx ,1
+x oo o xx,1
+x oo oxxx,1
+  x o x o,1
+   o    x,1
+  x o xxo,-1
+  x ooxxo,-1
+ox x o  x,0
+oxx xxo o,-1
+x xo oxo ,1
+x xo oxox,-1
+oox oxxx ,-1
+oox oxxxo,-1
+  o xx  o,1
+  oxxx  o,1
+xoo xo xx,1
+  x xxoo ,-1
+  xoxxoo ,1
+  ox xx o,1
+o xxoooxx,0
+o   oxx x,1
+ oox  xox,1
+ ooxx xox,-1
+ ox  oxxo,1
+ ox xoxxo,1
+x o  oxox,1
+xxo  oxox,1
+ oox x x ,-1
+ ooxox x ,-1
+o xo xxo ,1
+   x x  o,-1
+ o x   ox,1
+xo x   ox,-1
+xx  x o o,-1
+xx ox o o,1
+  x  x oo,-1
+  x  xxoo,-1
+ o x  oxx,-1
+oo x  oxx,0
+oo  oxxxx,1
+ox x xoox,1
+xoxx o xo,0
+xoxx ooxo,0
+    xo xo,1
+  xxo   o,1
+ xxxo   o,-1
+ o  xoxx ,1
+ xox oox ,1
+xo x  o x,-1
+xo x oo x,1
+xxoo o x ,1
+xxoo o xx,-1
+oxxxo   o,-1
+xoo xxo  ,1
+oxox x  o,1
+ x x ox o,-1
+xoxo   ox,1
+  x o  x ,0
+  x o  xo,0
+xx  o x o,1
+oo xox xx,-1
+x  oox ox,1
+xx oox ox,0
+oxx o xo ,0
+oxx o xox,0
+  o  x   ,0
+x  x  oox,-1
+xo x  oox,1
+x   oxxoo,1
+xx  oxxoo,1
+o    ox x,1
+o ox   x ,-1
+xoxooo xx,-1
+o x   xox,1
+o x o  x ,1
+  ox o x ,1
+x   oxx o,0
+o oxoxxox,0
+x  x    o,-1
+xo x    o,1
+  oxxo x ,-1
+ oo oxx x,1
+   oxox x,1
+  ooxox x,1
+  x      ,0
+    o   x,0
+x   o   x,0
+     oxox,1
+o x x  o ,1
+o x xx o ,1
+o xxx oo ,1
+o xxxxoo ,1
+x    o xo,1
+xx   o xo,-1
+ oooxxx x,-1
+ o  ox xx,1
+oo  ox xx,1
+x  o  x o,1
+oxx  xoxo,-1
+x   o    ,0
+  o  x xo,1
+oxxo xxoo,1
+oxoxxoxo ,0
+o xx o   ,0
+o x xo x ,1
+o x xo xo,1
+ xox  x o,-1
+oxox  x o,-1
+xx oo   x,-1
+xx ooo  x,-1
+o x o xox,1
+ooxxxo   ,1
+xoo    x ,1
+  x ooxx ,-1
+  xx  oxo,0
+o   xxxoo,1
+oxo x x  ,0
+oxo x x o,1
+x o oxxox,-1
+o ox x ox,1
+o ox xxox,-1
+xo xo oxx,-1
+xoxox   o,1
+xoxoxx  o,0
+ xo      ,0
+ xo   x  ,0
+oxx xo xo,1
+x  ox    ,1
+x xoo  xo,1
+xxxoo  xo,1
+    o oxx,0
+ x  o oxx,-1
+ o xo   x,0
+ox  ox   ,0
+oxx ox   ,-1
+x    x o ,0
+xo o  x  ,1
+x o x  o ,1
+x o xx o ,1
+xox  oo x,1
+xox xoo x,1
+ x  xox o,-1
+x    o ox,1
+xx   o ox,1
+o o x   x,0
+o o x x x,-1
+o  o x x ,1
+  xo  xxo,-1
+ oxo  xxo,1
+  oo xxox,0
+  ooxxxox,0
+    xxo o,1
+ x  xxo o,-1
+ooxxxx  o,1
+  xo   x ,0
+  xo  ox ,1
+  o xoxx ,-1
+   xoo x ,1
+ x  x xoo,0
+ o xoxxo ,-1
+ xxooxx o,-1
+oxxooxx o,-1
+ ooox xx ,1
+ ooox xxx,1
+   oxoxox,1
+x o xx oo,1
+xxo xx oo,-1
+oo xx  x ,-1
+x oo xxo ,0
+x ooxxxo ,0
+x   xo xo,-1
+ o   x x ,0
+ oo  x x ,1
+o x   xo ,1
+o xx  xo ,-1
+o  x x ox,1
+ x xoox  ,0
+o  x x xo,-1
+x  o xox ,1
+x  ooxox ,1
+x o x  xo,-1
+x o xo xo,-1
+xo xxox o,1
+oxox x ox,0
+xxoxxooo ,1
+xxoxxooox,1
+xooxxxoxo,1
+ x o xxoo,1
+ oxxox xo,-1
+ ox  x ox,1
+x  x oox ,-1
+xoox  o x,1
+ ox   ox ,0
+oxxox    ,-1
+oxxox o  ,-1
+x xooo  x,-1
+ oo x xx ,-1
+ x  xo xo,1
+   xooxx ,1
+ox  ox ox,1
+oxx ox ox,1
+ x   xoxo,-1
+ x o xoxo,1
+o  x  x o,1
+xx oxoo  ,1
+xx oxoo x,1
+oxox   xo,1
+oxox   x ,-1
+ o o x x ,1
+o  ox   x,1
+xox xxoo ,-1
+ o xoxx  ,-1
+x ox xoox,-1
+x oxoxoox,-1
+xxo o x  ,0
+x    ooxx,-1
+x o  ooxx,1
+ox  xo  x,0
+x xox  o ,1
+x xox  oo,1
+oo xx  ox,1
+oxo xx  o,1
+o xo oxxx,1
+   x o ox,1
+xx xxoo o,-1
+o x x x o,1
+xxo  x oo,0
+o x xxoxo,-1
+o xoxxoxo,-1
+ox x   xo,-1
+x xo  ox ,1
+xox o x  ,-1
+xox o xo ,-1
+oo x xx o,1
+ x oox xo,0
+ x ooxxxo,-1
+x ooox xx,-1
+    xxoo ,1
+   xxxoo ,1
+   oxx xo,0
+xoxx x oo,-1
+xoxxox oo,-1
+xox ox xo,0
+xoxoox xo,0
+      xox,0
+ o x  x  ,-1
+  oxx   o,1
+x oxx   o,-1
+x xoo ox ,1
+oxxoxxoo ,-1
+xxoxoo  x,-1
+xxoxooo x,-1
+ x x o xo,-1
+x        ,0
+x  o     ,1
+ox     ox,0
+ox    xox,0
+oxxo x   ,-1
+xoo xoxx ,-1
+x       o,1
+ox  xo   ,1
+     ooxx,1
+    xooxx,1
+o   xx ox,1
+o   xxoox,1
+ x x o   ,0
+x ox  oxo,-1
+x oxx oxo,-1
+oo   xx x,-1
+ x     o ,0
+ xx    o ,0
+x    o   ,1
+x x  o   ,1
+ x o xx o,0
+ x ooxx o,0
+x  oo xx ,-1
+xoo x xo ,1
+o  xoxox ,-1
+ ox o oxx,1
+ ox oxoxx,1
+o  xox  x,-1
+o oxox  x,-1
+ xxooxxoo,1
+o  x xxoo,1
+ xo   xox,0
+ xo  oxox,1
+xx    oo ,1
+xx xoo o ,1
+xxxxoo o ,1
+oxoxxox o,-1
+xxoxoo x ,-1
+xxoxooox ,-1
+xx o xo  ,1
+o  xx  xo,1
+o oxx  xo,1
+xxoo xxoo,0
+x xo oox ,1
+ xoox   x,1
+ xoox  ox,1
+   xoxo  ,-1
+ o xx x o,1
+ xxo x oo,1
+x xo  o  ,1
+xxxo  o  ,1
+    oxx o,0
+ x  oxx o,-1
+ xxoo   x,-1
+ xxoo o x,1
+x xox oo ,1
+xxxox oo ,1
+o ox  oxx,-1
+    x  ox,1
+   ox  ox,1
+ x o o  x,1
+ oxx xoo ,1
+ o x x xo,0
+oo x x xo,1
+ x xo   o,1
+o x x ox ,-1
+oox x ox ,0
+ ooxoxxxo,1
+ ox  xox ,0
+oox  xox ,1
+xxxoxoo  ,1
+oxoxoxxox,0
+ xxo oxxo,-1
+o x  xx o,-1
+o x oxx o,-1
+x oo xxxo,0
+xooo xxxo,0
+   xxx oo,1
+ox    xo ,0
+ox  x o  ,1
+ox  x ox ,1
+x  o  oxx,-1
+  x o x  ,0
+  x oox  ,0
+x  o   ox,1
+  oxo  x ,1
+oo  x x  ,1
+xo o x xo,0
+xoxo x xo,0
+ oxooxxx ,0
+ooxooxxx ,1
+ooxo xxx ,1
+oxxx oo x,0
+oxxxooo x,0
+oxox  x  ,-1
+x xo o ox,1
+ o  xxox ,0
+ox x  oxo,1
+ox x xoxo,-1
+oxx      ,-1
+oxxo     ,-1
+ox o x  x,-1
+o  xx    ,0
+ooxoxxx  ,1
+o x  xxoo,1
+xooxx x o,1
+ ox x   o,1
+o  x  xox,-1
+o ox  xox,0
+   x xo  ,-1
+oo o xx x,1
+    xoxxo,-1
+   oxoxxo,1
+xx xxoooo,-1
+ xx o  o ,1
+ xoooxxox,0
+xxoooxxox,0
+xo oox x ,1
+xoxoox x ,0
+  ox    x,0
+o ox    x,0
+ox oox  x,1
+xx ooo x ,-1
+xox xo o ,1
+xox xoxo ,1
+   oxx   ,0
+   o  oxx,-1
+   o xoxx,-1
+xo     xo,0
+xxoo    x,-1
+ ooox x x,1
+xoxo ox x,-1
+o o xox x,1
+  o xo x ,1
+x   o xox,-1
+xo  o xox,-1
+o x oox x,1
+ oxo xxxo,0
+ o x x   ,-1
+ o x x  o,1
+ x ox xo ,0
+ox ox xo ,1
+x x x  oo,-1
+x x xo oo,1
+xoo  x x ,1
+x xoxo  o,1
+xxxoxo  o,1
+xx  xooo ,1
+oxx oxoxo,-1
+ ox xo   ,1
+oxooxx   ,1
+ox ox   x,-1
+x x  ox o,1
+ o oxx   ,1
+xo oxx   ,0
+ oo xxox ,1
+ oo xxoxx,-1
+o x  ox  ,1
+ xoo  x  ,1
+ oo x  xx,-1
+ooo x  xx,-1
+    oxxxo,-1
+o   oxxxo,-1
+oxxo oxx ,-1
+oxxoooxx ,-1
+ox xx  oo,1
+  oo x  x,0
+x oo x  x,0
+ o xo x  ,1
+xx    xoo,1
+xx  o xoo,1
+   xxooox,1
+  xxxooox,0
+xxx oxo o,1
+x ooxxo  ,1
+x ooxxo x,1
+xo xo ox ,0
+ox  x xo ,0
+xxoxoox  ,1
+xxoo  o x,1
+o o  x x ,-1
+x  x ooxo,0
+ xxox oox,-1
+  xo  oxx,-1
+  xoo oxx,1
+  x xoo x,0
+  x xooox,1
+x   ox o ,0
+xx  ox o ,0
+ xxo   o ,1
+ xxo   ox,1
+ox ox x  ,1
+ox oxox  ,1
+oxo xxx o,1
+x xo o   ,1
+ x ooxx  ,0
+xoxx  o o,0
+xoxxx o o,-1
+    x o  ,0
+    x ox ,0
+  o  oxx ,1
+  o  xxox,-1
+  oxoxox ,-1
+o xx oxo ,1
+o xx oxox,0
+ox  xoxox,0
+x  o o x ,1
+x  o oxx ,-1
+xo xox   ,-1
+xo xox o ,-1
+ oox  x x,-1
+ooox  x x,-1
+ox o xx o,1
+x   xoxo ,1
+oxx  ooxx,-1
+ xxxoo  o,1
+ x  oox x,-1
+  ox  o x,1
+ xox  o x,-1
+o    xxxo,-1
+xxx oo xo,1
+o x  xo  ,1
+ox xo xox,0
+  xxo x o,-1
+xoox xox ,-1
+xoox xoxo,1
+ xxoo  ox,1
+ xxoo xox,-1
+x oxx o  ,1
+x oxx o o,1
+x x xoo  ,1
+ox ox xox,0
+  xox    ,1
+  xox   o,1
+ xxo o ox,1
+xxxo o ox,1
+x xo   ox,1
+ox x xxoo,-1
+ox xoxxoo,-1
+ x xo  xo,-1
+xxo oxoox,-1
+xxo  oo x,1
+xxo xoo x,1
+ ooxx   x,-1
+ ooxxo  x,1
+oxox  o x,1
+oxox  oxx,-1
+oox o x x,1
+oox oxx x,1
+  oxoox x,1
+ox    ox ,1
+x  xxooxo,-1
+xoxxx  oo,-1
+xoxxxo oo,1
+oxxo  x  ,-1
+oxxoo x  ,-1
+o     xx ,1
+  xoxoxox,1
+xo   x  o,1
+xxox xo o,-1
+oxox xox ,-1
+ox x x oo,1
+ox xxx oo,1
+ox ooxx x,1
+ox ooxxox,1
+ x ooxxo ,1
+ xxooxxo ,1
+   oox xx,1
+o  oox xx,1
+  xo xoxo,0
+x xo  xoo,1
+x xox xoo,1
+x  o o xx,-1
+ oox xox ,1
+x  oxo xo,1
+x  oxoxxo,-1
+ x xoo   ,1
+x xoo    ,1
+x xoox   ,1
+   xooxox,1
+ x xooxox,0
+xo xoxoox,-1
+xx oo    ,1
+oox x  x ,0
+  x x o  ,0
+oxx  x o ,-1
+ x   xo  ,-1
+ x o xo  ,1
+ x   o   ,1
+ x   o  x,0
+xoxxo ox ,0
+ o x xo  ,1
+ x  oo  x,0
+xo xx oxo,0
+xo xxooxo,0
+    xo   ,1
+  x xo   ,1
+x o o  xx,-1
+oxxoo   x,1
+oxxoo  xx,-1
+ oxoxxoxo,0
+  ox   xo,-1
+x ox   xo,-1
+ o xx  o ,1
+xoo   xox,1
+xoox  xox,1
+xo  oo xx,1
+ ox    ox,1
+ oxxx  oo,1
+ox xooxxo,-1
+xxoxoo ox,1
+xxoxooxox,1
+ xo  x   ,0
+ xo ox   ,0
+oox xxo x,1
+  x   oox,1
+  x x oox,1
+  oxx xoo,1
+  xooxx o,0
+x xooxx o,0
+xoo   oxx,1
+xoooxx   ,1
+xoooxx x ,0
+xo    xo ,1
+xox   xo ,-1
+ox o oxx ,1
+ oxx xo  ,1
+o  xo oxx,0
+ xx oxoo ,1
+xxx oxoo ,1
+x x   oxo,0
+xxox o o ,1
+xxoxxo o ,-1
+o oxoxx x,-1
+ox xox   ,-1
+o xo x x ,-1
+xoxo x  o,0
+xoxo xx o,0
+oxo  xx  ,0
+ o oxxx o,1
+ oxoxxx o,1
+o oxx xox,-1
+xo oox xx,1
+ xox o x ,-1
+x o   x o,1
+x ox  x o,1
+ x oxox  ,1
+ x  ooxox,0
+x  xx ooo,-1
+xoo  oxx ,1
+xoox oxx ,1
+ xo oo xx,1
+o  xx  o ,1
+o xxx  o ,1
+ xo oox x,1
+ xo ooxxx,1
+ x oxoxox,1
+o o  xxox,0
+x oxox ox,-1
+o  oxoxx ,1
+o  oxoxxx,1
+x  oo xxo,0
+ x oo x x,-1
+o xx xoo ,1
+o x ox   ,1
+o x oxx  ,-1
+ o xooxxx,1
+  xx ooxo,1
+x xx ooxo,0
+oox xo x ,1
+xooxoxox ,-1
+o  xxox o,1
+o  xxoxxo,-1
+   o   xx,-1
+   oo  xx,1
+ ox oxox ,1
+xoxo  ox ,1
+xoxo xox ,0
+xo x oox ,0
+ x xxoxoo,-1
+o   x xox,0
+o  ox xox,1
+ xxox o  ,-1
+ xxox o o,1
+xo o xoxx,1
+ xoooxxxo,0
+o  x ooxx,0
+ox x ooxx,0
+oxoo  xx ,1
+oxoox xx ,1
+    o  xx,0
+xo ox    ,1
+ oxxx oo ,1
+ xxo o x ,-1
+ xxo oox ,1
+x x o  o ,1
+xo  xx  o,0
+x o  o xx,1
+xxo o x o,1
+oo o x xx,1
+oo o xxxx,1
+o      xx,-1
+oo     xx,1
+o   oxxox,1
+o x oxxox,1
+xox  o   ,1
+oox ox x ,1
+oox ox xx,1
+x oo oxx ,1
+xxoo oxx ,-1
+ x oxxo  ,-1
+ x     xo,-1
+xxo   oox,1
+x xxo o o,1
+x xxoxo o,-1
+x    ox  ,1
+x  o ox  ,1
+xoo x xox,1
+ xooo  xx,1
+ xooo xxx,1
+  xxoxo o,-1
+  xxoxoxo,-1
+ x   oxox,0
+ox   oxox,0
+xxo o   x,-1
+xoxo    x,1
+x oxo  ox,1
+x oxo xox,1
+ xox ooxx,-1
+ ox   xo ,1
+oxx o  x ,-1
+oxx o ox ,-1
+ox xxoox ,1
+x   o x  ,0
+x o o x  ,1
+o  oxx x ,-1
+oo oxx x ,-1
+ox x  ox ,-1
+oxox  ox ,1
+ o oxxx  ,0
+oxx   ox ,-1
+ oxox  ox,1
+xoxox  ox,1
+oxx x   o,1
+oxxox   o,1
+ xxo o xo,1
+oox  o xx,1
+   o xxxo,0
+   ooxxxo,0
+xo x x  o,1
+x  ooxx o,0
+o o xx   ,1
+o o xx  x,-1
+ xox o   ,1
+xo o o xx,1
+x xo xo  ,1
+oxxoox   ,1
+oxx xooox,0
+oxxxxooox,0
+o   xo x ,1
+o   xo xx,1
+xxxo oox ,1
+xoxo xxoo,1
+xoxoxxxoo,1
+xx o o  x,-1
+xxoo o  x,1
+  xx    o,0
+xo   xo x,1
+xo o xo x,1
+     x ox,1
+ o   x ox,1
+   x oox ,0
+  o  xo x,1
+ xo  xo x,-1
+x    x oo,1
+x x  x oo,-1
+xo x  oxo,0
+xoxx  oxo,0
+  ox  ox ,1
+x ox  ox ,-1
+ x  x  oo,0
+ xx x  oo,-1
+xxxxooo  ,1
+  x  ox o,1
+  xxoooxx,0
+o  x  xo ,1
+xoxoo  x ,0
+      xxo,-1
+ox   o  x,1
+ox   o xx,1
+o oxx x o,1
+x  oxo   ,1
+xx oxo   ,1
+ oxxoo xx,0
+ooxo  xx ,1
+ o   xx o,1
+ x x o o ,1
+xx x o o ,1
+  x oxox ,0
+  x oxoxo,0
+xx o  oxo,1
+ xo oxxox,0
+xxox  xoo,1
+o   ox x ,1
+o   ox xx,1
+ o  oxxxo,0
+ o  oxoxx,1
+ oo x x x,-1
+ oo x xox,1
+ o xxox  ,1
+ o xxoxo ,1
+x oxo ox ,-1
+o x o x  ,1
+ooxxx o  ,1
+oo xx xo ,1
+ x oxxoox,-1
+ xo oxxo ,0
+xxo oxxo ,0
+oo  x xx ,-1
+oo ox xx ,1
+xx ox  o ,1
+ xxo oo x,1
+ xxoxoo x,-1
+ o x xxoo,1
+ o  xxx o,1
+ xxo  o  ,1
+ xxo  ox ,-1
+o o xxo x,1
+ xx oox  ,-1
+  xo ox x,-1
+oxoxx x o,-1
+o xxxo o ,1
+oxxxxo o ,0
+oo x oxxx,1
+ ooxoxxx ,-1
+xoo xxxoo,1
+xooxxxxoo,1
+xxo xo  o,-1
+ooxxx o x,0
+ xoo x ox,0
+ xooxx ox,0
+o   oxx  ,1
+ox xooxx ,-1
+ xo  oxxo,-1
+ xx xooox,0
+xx xo  o ,1
+o xo o xx,1
+ x oxoo x,1
+xoo  xx  ,1
+xoo oxx  ,1
+xoxxooox ,0
+ ooxoxxox,-1
+ ooxxo x ,-1
+xxo xo o ,1
+oox xxoxo,1
+ oox x xo,1
+ oxo  x x,1
+ oxoo x x,1
+xx ooxox ,-1
+xxoooxox ,-1
+     ox  ,1
+ x   ox  ,0
+ oo xoxx ,1
+ ox oxx o,-1
+ ox oxxxo,-1
+oxxo xx o,-1
+ xo xoxox,0
+oxxx o  o,1
+o ox o xx,1
+ o     xx,0
+xo o x  x,1
+  xox o  ,1
+x xox o  ,1
+ oxxo    ,0
+xo xxoox ,0
+  x  x o ,-1
+  x  xoo ,1
+ox  x    ,0
+o x xx oo,1
+o x xoox ,1
+o xxxoox ,0
+  xxoo xo,1
+ xxxoo xo,-1
+ o xo xx ,1
+oo xo xx ,1
+xoxxxooo ,1
+xoxxxooox,1
+xo x     ,1
+ xx     o,1
+ x xxo oo,-1
+ x oo   x,0
+xoo  o xx,1
+ xoo xo x,-1
+ xooxxo x,-1
+x  ooxoxx,-1
+xo ooxoxx,1
+x  x ox o,1
+oo x oxx ,1
+oo xxoxx ,-1
+o ox x  x,-1
+o ox xo x,1
+ x ooxoxx,-1
+ox ooxoxx,-1
+x o  x  o,1
+xox x o o,0
+   o xx  ,0
+ xox xo  ,-1
+ xox xo o,1
+x oxx  oo,1
+ x oox ox,1
+ x  ooxx ,-1
+o  oxx ox,1
+x o o xxo,1
+o o xx xo,1
+xxo oox x,-1
+xxoooox x,-1
+oxxx  xoo,-1
+oxxxo xoo,-1
+   x xoox,1
+o  x xoox,1
+xxox  oo ,-1
+xxoxx oo ,-1
+ x   xoox,1
+ x o xoox,1
+xox     o,1
+x o oxxxo,0
+xoox   xo,1
+oo o xxx ,1
+x   ox  o,0
+ o xx ox ,0
+oxxx  oox,0
+oxxxo oox,1
+x o o xx ,1
+x ooo xx ,1
+ oxx x o ,-1
+ooxxxo x ,0
+ oxooxx x,1
+x  xoo  x,0
+xo xoo  x,1
+xoo  xxo ,1
+x xx  o o,-1
+x xx  ooo,-1
+  x x  o ,1
+x  x x oo,-1
+ xoxox xo,-1
+oxoxox xo,-1
+oxxxoxo o,-1
+    xx  o,0
+oxxx  oo ,0
+o  xx oxo,1
+o xo    x,1
+ox o  xox,1
+x o  xoxo,1
+oxo xox x,0
+oox x  xo,1
+oox x xxo,1
+x o   o x,1
+xx  oxo  ,-1
+xxo oxo  ,-1
+x   x xoo,1
+x   xoxoo,1
+ xxxoo   ,0
+xxoo  x o,0
+xxoo xx o,0
+xxoxoxoo ,-1
+ox   x  o,1
+ox  xx  o,1
+ oox xx o,1
+xoox xx o,1
+oxxo ox  ,1
+oxxo ox x,-1
+  x x oo ,1
+xoxx o o ,1
+o xxoo xx,0
+o xxxo   ,0
+ oxxxooox,1
+  o   x  ,1
+o o  x  x,-1
+xo o xox ,1
+xxoo xxo ,0
+ xo  xox ,-1
+oxo  xox ,1
+o   oxxx ,-1
+   oxxxo ,0
+x x xoxoo,1
+ x o    x,0
+x   oxxo ,-1
+ xx ooox ,1
+ xxxooox ,0
+ooox   xx,-1
+oxx ooxox,0
+oxxxooxox,0
+  ooxxxo ,0
+xo   oxxo,1
+xo x oxxo,1
+  x o    ,0
+x x o    ,0
+o oxx ox ,1
+   xox o ,-1
+x  o  xox,-1
+x oo  xox,1
+  xxoo  x,0
+ o  xx o ,1
+ x oo oxx,-1
+xx xooox ,-1
+ oxo o xx,1
+ ox xoox ,0
+ oxo  x  ,1
+xoooxx  x,1
+  xx o xo,1
+x  xo  o ,1
+x xxo  o ,-1
+oxoxo x  ,0
+ o  xx ox,1
+  x  oxox,-1
+ oxxoo  x,0
+ x  ox   ,0
+  o xooxx,1
+xo ooxxxo,0
+oox x   x,1
+oox xo  x,1
+oxx x o o,1
+ x   oxo ,1
+ xx  oxo ,1
+oox  xx o,1
+ooxx xx o,-1
+xox ox  o,0
+xox o oxx,0
+x  x   oo,1
+ xoox x  ,0
+oxoox x  ,1
+xxo  xoxo,-1
+ oxxox   ,-1
+ oxxox  o,-1
+x  x o   ,0
+x  x o o ,1
+  o    xx,1
+x oxox xo,-1
+xx o  xo ,0
+x oxx oo ,1
+  oxx  xo,-1
+  oxx oxo,1
+   x  xo ,1
+ oxox oxx,-1
+ oxoxooxx,1
+x   o  xo,0
+xoxx oo x,0
+x  oxo  x,1
+ ox   x o,1
+ox x x  o,-1
+  xooxxo ,1
+  xoox x ,0
+ oxoox x ,1
+x  ox o  ,1
+xx ox o  ,1
+x oo  xx ,0
+o   xxox ,-1
+ o xoxoxx,-1
+ ooxoxoxx,-1
+x     xo ,1
+x  o  xo ,1
+ x xoxoxo,-1
+  o x  ox,1
+x  ox oxo,1
+o xxoxo  ,1
+o xxoxo x,1
+o xooxx  ,1
+o xooxxx ,-1
+  xoxxo o,-1
+ xxoxxo o,-1
+ooox x  x,-1
+ox xooxox,0
+x xoo   x,-1
+oxx oxo  ,1
+oxx oxo x,1
+o   xoxx ,1
+o o xoxx ,1
+  oox x x,1
+xooo xoxx,1
+xoooxxoxx,1
+xoo o x x,1
+ x xo oxo,-1
+  o  xxo ,1
+oxxoxoo x,-1
+oxxooxx  ,-1
+  x  oox ,1
+ xx  oox ,1
+ oxx o xo,1
+ox xxooox,0
+ o  xx   ,1
+     ox x,1
+ xox oxox,0
+o xoxx xo,-1
+ooxoxx xo,1
+x      o ,1
+  x o o x,1
+ x xxo o ,-1
+xox ooxox,-1
+ox oxx   ,-1
+xx oo xo ,1
+xxxoo xo ,1
+ o  xx  o,1
+xxxoo o x,1
+xxo ox o ,0
+xxoxox o ,-1
+ox  x  o ,0
+ xox   xo,-1
+ xox o xo,-1
+o  xo xxo,-1
+ox  ooxxx,1
+x xxo   o,1
+ooxxx oox,1
+ooxxxxoox,1
+ o ox x  ,1
+ ooxx    ,1
+x  o   xo,1
+x xo   xo,0
+x  oox   ,1
+  ox x o ,1
+x ox x o ,1
+xoxx   oo,1
+xoxx  xoo,1
+xo   x   ,0
+o xxo x o,-1
+xo ox x  ,1
+xo ox x o,1
+ ox      ,1
+xoxo oxx ,-1
+ oxoxxxo ,1
+x o oxxo ,1
+ oo xxx o,1
+x oox xxo,-1
+   xo  x ,0
+  oox   x,1
+x oox   x,1
+x oox    ,1
+x xxxooo ,-1
+xx      o,-1
+ o  xox x,1
+oxxo o x ,1
+oxxoxo x ,1
+ x xoooxx,-1
+ xoxoooxx,-1
+x o   ox ,1
+ox  xooxx,1
+   oxx ox,1
+x  o o  x,1
+ o o x  x,1
+ o oxx  x,1
+ xox  ox ,-1
+xoo xox  ,1
+xooxxox  ,1
+   x o  x,0
+ xoxo    ,0
+  x xoo  ,1
+ oooxxx  ,0
+xoooxxx  ,0
+oxo xoxox,0
+oxoxxoxox,0
+ xx o  xo,-1
+ox x  x o,-1
+oxxxx  oo,-1
+o x xo  x,0
+o x xo ox,1
+o  xx   o,1
+x oxxxo o,1
+x  oxxxoo,0
+xo     x ,0
+o xxxo xo,1
+o xxxooxo,1
+   xx  o ,1
+ xooxxxoo,0
+xo   xxo ,-1
+ox x  xoo,1
+ xoo xox ,1
+ xxoo  x ,-1
+ xxooo x ,-1
+oxx xxoo ,-1
+o oxox xx,-1
+oooxox xx,-1
+oxx xo   ,1
+  x   xoo,1
+   x     ,0
+   ox   x,1
+   ox o x,1
+  x oo x ,0
+  oxox  x,-1
+ x  oxo x,-1
+ xo oxo x,-1
+xo xxo xo,-1
+oo x  x x,-1
+oo xo x x,1
+oxo oxxx ,-1
+oxox x o ,1
+ oo  x xx,-1
+o xx     ,0
+oo xo xxx,1
+ o xx o x,1
+ ooxx o x,1
+  ox  xox,0
+ox x  o  ,1
+ox x xo  ,-1
+x xox   o,1
+x xox o o,1
+ o   xx  ,0
+xox oxx o,-1
+xox oxxoo,-1
+o  oxo xx,1
+o xoxo xx,-1
+x o  o x ,1
+x o xo x ,-1
+ xoox x o,1
+xx o o ox,1
+ xo  x  o,1
+o oxx o x,1
+o oxxxo x,1
+xx oxo o ,1
+xxxoxo o ,1
+x xxooo  ,1
+xoo o  xx,1
+xoo o xxx,1
+x o xo  x,1
+  ox o  x,1
+xoxoxxo o,0
+xoxoxxoxo,0
+ x  xxooo,-1
+oxx ooxx ,-1
+xxxoxooox,1
+x  o    x,0
+xox  oxxo,1
+o   xx  o,1
+o   xxx o,1
+ox ooxxxo,-1
+xx x   oo,-1
+xx x  ooo,-1
+x xoxo o ,1
+ oxxo  x ,0
+ooxxo  x ,1
+ x x    o,-1
+x x  ooxo,1
+ xooo x x,1
+xxo  o   ,-1
+xooxx    ,1
+o xx    o,1
+    xxo  ,0
+x  o oxox,1
+oxo xx o ,1
+oxoxxx o ,1
+  xox oox,1
+ xo ox ox,0
+x  xooo x,0
+o ooxxx x,-1
+ooooxxx x,-1
+ oxxx xoo,1
+oxox x   ,-1
+x xoxoo  ,1
+x xoxoox ,1
+ oox xxo ,1
+ oox xxox,-1
+ xxxooo x,0
+xxx   o o,1
+ o o   xx,1
+ oxo   xx,1
+x oxo x  ,1
+ o ox  xx,1
+ ooox  xx,1
+ oxxoox  ,1
+o      x ,1
+o   x  x ,0
+xo xo    ,1
+xo xo x  ,1
+o  o  xxx,1
+xo xoxoxo,0
+ xo o   x,0
+ xo o x x,0
+ox x  xo ,0
+ oo xoxxx,1
+ooxo  xxx,1
+   xoo  x,1
+ x xoo  x,0
+o x x  ox,1
+o x x o  ,0
+ o o xxxo,0
+ ox  oxox,1
+ ox xoxox,1
+  x x   o,0
+o x x   o,1
+o     x x,1
+o o   x x,1
+xx oxxo o,-1
+xx oxxooo,-1
+ x o   x ,-1
+ oxxxooxo,0
+xoxxxooxo,0
+o   xooxx,1
+ oxx    o,1
+x o oo xx,1
+oxx  oox ,1
+oxxx oox ,0
+x  xooox ,0
+x  xoooxx,-1
+  x  o ox,1
+x  o xoox,1
+x  oxxoox,1
+xoo x oxx,1
+x   xo   ,1
+ oxxo xxo,-1
+  xxxo oo,1
+oo xxoxxo,1
+  xx ooox,1
+o xo x  x,1
+ o xooxx ,1
+oox xx o ,1
+ oxxxxoo ,1
+  o xo xx,1
+ xoxooxox,1
+x oxooxx ,1
+ x xoo ox,1
+ oxxoxx o,-1
+xoo   x x,1
+xox oooxx,0
+ooxxoo xx,1
+ooxxooxxx,1
+oo  x xxo,1
+ x     ox,0
+o xx o xo,1
+x xxoo  o,1
+oxo x xo ,0
+o xoxo  x,1
+o xoxox x,1
+  ooxx x ,0
+ oooxx x ,0
+x x o o  ,1
+x xxo o  ,0
+x x  xo o,-1
+o oox x x,1
+ xx  oxoo,1
+xxx  oxoo,1
+    xoox ,1
+  xxoxxoo,-1
+o xxoxxoo,-1
+xoxxoo x ,0
+xoxxoo xo,1
+x oxox   ,-1
+o x   x o,1
+oxo o xx ,1
+oxo o xxx,1
+  ox x  o,1
+ xox x  o,-1
+ox xoxoxo,-1
+  xx x oo,-1
+o xx x oo,1
+x x oo  x,-1
+xox oo  x,-1
+  x    o ,1
+  x   xo ,0
+  oox x  ,1
+  ooxxx  ,0
+  x ox o ,1
+xoxo xoxo,0
+ x  xoo x,1
+ x  xooox,1
+oxoo xx x,0
+xoxo oxxo,1
+xoxoxoxxo,1
+ ox o xxo,0
+ xoxxo o ,0
+xxoxo  o ,1
+xxoxxo oo,-1
+o xx   xo,-1
+o xxo  xo,-1
+ o   o xx,1
+ o x o xx,0
+x xo  x o,1
+x xoo x o,1
+xoooxxxxo,0
+ oxxo x  ,-1
+ xx   xoo,1
+oxxo   ox,1
+     x o ,1
+    xx o ,1
+ ooxxooxx,1
+xxoo xox ,-1
+ oo   xx ,1
+xoo   xx ,1
+o xxo xo ,-1
+o xxoxxo ,-1
+ xo x oox,1
+oox x    ,1
+ooxxx    ,1
+ ox   x  ,0
+ ox  ox  ,1
+   o ox x,1
+ ooo x xx,1
+ ooo xxxx,1
+x xxoox o,1
+ xoo xx  ,0
+x  x xo o,-1
+o o   xxx,1
+ooo xxxxo,-1
+  x xo xo,1
+ ooxx oxx,-1
+ oxo   x ,1
+ oxx  o x,0
+ xox     ,-1
+ox o   x ,1
+xxo  xo  ,-1
+ oxo  xx ,1
+xo   ox  ,1
+xxoxx o o,-1
+xxoxxoo o,-1
+o  oxox x,1
+ox  oxox ,-1
+oxx oxox ,-1
+o x ooxx ,1
+  x  x  o,-1
+xo ox xxo,0
+ xoxo x o,1
+ xoxo xxo,-1
+xx oxoxo ,1
+ x  ox ox,0
+xoooxx xo,0
+xo oxxo  ,1
+x x o oxo,1
+xo o x x ,0
+xooo x x ,1
+ oxooxx  ,1
+oxx  x  o,-1
+o ox oxxx,1
+xxo  o  x,-1
+ xo  x ox,0
+xxoo   x ,-1
+xxoo   xo,1
+o oxx    ,1
+oxoxx    ,1
+  xo xo  ,1
+  xo xo x,1
+oxx  ox o,1
+ xx o x o,-1
+ xx o xoo,1
+  o   x x,1
+  o o x x,1
+x  oo   x,0
+x o  ox  ,1
+   o oxxx,1
+  o oxxox,0
+ o xxo   ,1
+xo  xo x ,0
+ xoxx  o ,0
+ o   xxox,-1
+oo   xxox,1
+oo  xxxox,-1
+xo  oxx o,1
+xxx xooo ,1
+xoo  ox x,1
+ooxx     ,1
+ x x  o  ,-1
+oo oxx xx,-1
+oo x  xox,-1
+oo x xxox,-1
+o xoo xx ,1
+x o x  ox,1
+  xo x xo,-1
+xx xo o  ,-1
+xx xo oo ,1
+ x   oxxo,-1
+o xxo x  ,-1
+ oxxo  xo,0
+xox o   x,-1
+  xoo xxo,-1
+  xooxxxo,-1
+x xoox xo,0
+x xoxoxo ,1
+  x oxxo ,-1
+ ox oxxo ,-1
+ xxx ooxo,1
+ xxxoooxo,1
+xoxooox x,-1
+o   xox x,1
+  ox x   ,-1
+  ox xo  ,1
+oo xx o x,1
+oo xxxo x,1
+xo ox ox ,1
+xo ox oxx,1
+x xo  o x,1
+oxx  oxo ,1
+oxx  oxox,0
+xxox o   ,-1
+xxoox   o,1
+x o ox   ,0
+oxo xxxo ,0
+o x x oox,1
+oxx x oox,-1
+o  o x  x,1
+o  oxx  x,-1
+o oxxox  ,-1
+o oxxox x,-1
+  oo xoxx,-1
+ xx oo   ,1
+x o  oxx ,-1
+ xo   oxx,-1
+oxo   oxx,1
+o  x     ,0
+xx o o   ,1
+  xxooox ,0
+ xoxxx oo,1
+ xxo xo  ,-1
+oxxo xo  ,-1
+ ooxo xxx,1
+  o x o x,1
+o    xoxx,-1
+x ooo x x,1
+x oooxx x,0
+ xox   o ,0
+ xox  xo ,0
+  xoox  x,1
+ o xxx  o,1
+oxo  x  x,-1
+oxo ox  x,0
+xxox   o ,-1
+xxox   oo,1
+xoxxx oo ,-1
+ xo xx o ,0
+ xo xxoo ,1
+xxx o oxo,1
+x  oo xox,-1
+ox x o ox,0
+oxxx o ox,0
+o  oxxx o,1
+oxxo oxxo,1
+xox oxox ,0
+xo ox  x ,0
+x     o x,1
+x    oo x,1
+ x xooo x,0
+xo xox  o,1
+xoxxox  o,-1
+xxo oox  ,1
+xx o xoo ,1
+xxxo xoo ,1
+ xoxo  x ,-1
+xxxoox  o,1
+oo oxxxx ,-1
+oo oxxxxo,1
+     xox ,-1
+xox x o  ,0
+xooxx xo ,1
+oxx xo  o,1
+x  o xx o,0
+xxxo o xo,1
+ oxx oxxo,1
+ooxx oxxo,1
+xxx  ooxo,1
+oxxx oo  ,0
+ox oxoxx ,1
+ox ox o x,-1
+xxooxx  o,0
+xoo  xx o,1
+xoo  xxxo,0
+xoo xxxo ,1
+ox oxx  o,1
+oxxoxx  o,-1
+xx  x ooo,-1
+xxooo   x,-1
+xxooox  x,-1
+oxoxxooxx,1
+oxxoxo   ,1
+oxxoxo  x,-1
+xo    ox ,0
+   o xxox,0
+o  o xxox,1
+xoxxo    ,-1
+xoxxo  o ,-1
+ox o o xx,1
+ox o oxxx,1
+ xo o xox,0
+o xo xx  ,1
+ oooxx  x,1
+x xo xoxo,0
+x ox x oo,1
+oo  x  xx,-1
+oo  x oxx,-1
+     xo  ,1
+x xx o  o,1
+o oxxoxox,0
+  o xxox ,1
+ oox  x  ,1
+o  xx o x,0
+ ooo xxx ,1
+ xxo x o ,1
+ xxoox o ,1
+xo oxxo x,1
+  o x xox,0
+o o x xox,0
+ x  x o o,1
+ x xx o o,-1
+xxooox   ,0
+o xo xx o,1
+o oxxx xo,1
+x   oo xx,-1
+x   oooxx,-1
+xxxox o o,1
+o oox xxx,1
+xx o  ox ,1
+xx o oox ,1
+ oxxoxoxo,0
+xx o ox  ,-1
+xxooox x ,-1
+xxooox xo,0
+ooxxoox x,1
+  x oo xx,-1
+   o xxo ,1
+ x o xxo ,0
+x xx oo  ,0
+   x  xoo,1
+o  xxxoxo,1
+o xx ooxx,0
+xo xx   o,1
+xo xx  oo,1
+ xo  xoxo,1
+x xoox o ,1
+o  xxo  x,0
+o oxxo  x,0
+xoox o  x,1
+xooxxo  x,1
+ o o xxx ,0
+ xxo xoox,1
+ o x   xo,0
+o xx  x o,-1
+o xx  xoo,1
+o  xoox x,1
+o x  x o ,1
+   o x  x,0
+   o xo x,1
+xx o o xo,1
+xoxxxo  o,0
+oxxooxxox,1
+x    xoxo,0
+  o xxoox,1
+  oxxxoox,1
+  ox     ,1
+xox x oo ,1
+  x xx oo,-1
+xoox o x ,1
+ xxxxooo ,-1
+ xxxxoooo,-1
+  xxo o x,0
+  xxooo x,0
+o x  oxx ,1
+ ox  oxx ,1
+ ox ooxx ,1
+ oooxxoxx,1
+ x ox x o,1
+ox ox x o,1
+o xxx o  ,0
+o xxx o o,1
+  xxo ox ,0
+oxx ooxxo,-1
+ o  xxxoo,1
+ xxo o  x,-1
+o  xoo xx,1
+ox xoo xx,0
+ oo    xx,1
+ oo   xxx,1
+  oox xox,1
+x oox xox,1
+oxoxo   x,0
+  ooxx xo,1
+  ooxxxxo,0
+   xoxxo ,-1
+xo    x  ,1
+o  ox  x ,1
+o  ox xx ,1
+oxox xxoo,1
+oxxxo o x,0
+x oxox  o,1
+  x xxooo,-1
+xxo   o  ,1
+xxox  o  ,-1
+o  oxxo x,-1
+ ox  xxoo,1
+o oxo xxx,1
+xox  o x ,0
+x  xxo o ,1
+    oxx  ,0
+   ooxx  ,1
+ ox o  x ,1
+xx  o   o,1
+ x ooxxox,0
+xxoo ox  ,-1
+   xxo   ,0
+x    xoo ,1
+ oxo  oxx,1
+x  xo o  ,0
+xo o  xox,1
+xo oxoxx ,1
+xoooxoxx ,1
+xxoo x o ,0
+ox  xxxoo,1
+ x o  xo ,1
+    o x  ,0
+  x  oxxo,-1
+ o   xox ,0
+  o  xx  ,0
+ xxoo x  ,-1
+oxo oxxox,0
+ xoooxxx ,0
+xooxxo xo,-1
+ oo xx x ,-1
+o x   x  ,1
+oox   x  ,1
+x oxxo o ,1
+ xooxo  x,1
+ xooxox x,1
+x xx ooo ,1
+   o  x  ,1
+x x oxxoo,-1
+x xooxxoo,1
+ooxxo x x,-1
+ooxxo xox,-1
+x ox ooxx,-1
+  xx oox ,0
+xoo  xox ,1
+xx o  oox,1
+ oxox  xo,1
+xx x  oo ,-1
+xx oxoox ,1
+xoo  xoxx,-1
+xxoo xo x,-1
+  o  x ox,1
+ox  xxoo ,1
+ xoo xxxo,0
+xx xooo  ,1
+xxooooxx ,-1
+xox xoo  ,1
+ ooxx  xo,1
+xoo oxxox,-1
+ooox xxxo,-1
+xo xoo x ,1
+ xox xoox,-1
+ ox  x   ,1
+  x  xo o,-1
+ xxox  oo,1
+xxooxo   ,1
+   xxooxo,1
+ x xxooxo,1
+ x  ox xo,-1
+o x xoo x,0
+    xo ox,1
+oxx o  xo,-1
+ x x ooxo,1
+x x ooxxo,-1
+     xoxo,1
+    xxoxo,1
+  x xox o,1
+x   xxo o,-1
+x   xxooo,-1
+xo o xxo ,1
+xo o xxox,-1
+oxxox oox,-1
+oxooxxx o,1
+oxooxxxxo,1
+ oxx  o  ,1
+oooxx xox,-1
+xo xxo o ,1
+ xox  oxo,1
+xx  oxo o,1
+   xxo xo,-1
+o oxo  xx,1
+xo oxoxxo,1
+x oo    x,1
+ xo  o x ,1
+xx  ox  o,0
+xxo ox  o,0
+xxo  ox o,-1
+xxo  o xo,-1
+ xoxxoo x,1
+ xx  oo  ,1
+  xx  oox,1
+o  xo xx ,-1
+xox   xoo,1
+xox  xxoo,-1
+ o oxxoxx,-1
+  o xx o ,1
+ xxo xoo ,1
+  x xo ox,1
+x oo xo x,1
+o x xxo o,1
+o xxxxo o,1
+ox  oxxox,0
+ xxo ox o,1
+xx x o  o,-1
+xx xoo  o,1
+ xxxo  oo,1
+ oxox xxo,1
+ o x xoox,1
+xo  oxox ,0
+  xoox xo,0
+    oxxox,-1
+oxxxoo x ,-1
+ox x oo x,0
+ox xxoo x,0
+ox  x oox,0
+ox o x x ,-1
+ox oox x ,-1
+ oxooxxxo,0
+ xo xxo  ,1
+oxo xxo  ,1
+x ooxo xx,1
+ oo xxxxo,-1
+ xoo x   ,0
+xo  oxx  ,-1
+x x   oox,1
+o  x xoxo,1
+ oo   x x,1
+xoxo   xo,0
+ x oxxoxo,1
+     xx o,0
+x     oxo,1
+    xx oo,1
+ x oxo ox,1
+xx oxo ox,1
+ xoooxoxx,-1
+oxo xo  x,1
+o xoxx ox,1
+o o xx ox,1
+o ox   xx,-1
+xxoox x o,-1
+xxooxox o,-1
+o oxxoxx ,-1
+oooxxoxx ,-1
+o     xxo,1
+o   x xxo,1
+o xoox x ,1
+ x oo xox,0
+ xoxoxoox,-1
+ x ox o  ,1
+oxx    ox,0
+  xo xox ,-1
+ oxo xox ,1
+  x  xoox,1
+ox xo xo ,0
+oxxxo xo ,-1
+xxoox  o ,1
+oxo xx ox,0
+oxo xxoox,1
+oxxoo oxx,-1
+ox  xxoox,-1
+xo  xxo o,1
+xo  xx o ,1
+x  ooxx  ,0
+ox x oxo ,0
+ox x oxox,0
+ ooo xx x,1
+xx xooxo ,1
+x  ooxxox,-1
+x oooxxox,0
+  o xxo x,1
+o  o xoxx,-1
+x oo x ox,1
+x oo xxox,0
+xoo o xx ,1
+xooxo xx ,1
+ ooxxoxx ,-1
+oox  xoxx,1
+x o ooxx ,1
+oox oxx  ,1
+   x  o  ,0
+ x oxox o,1
+o   x ox ,1
+ox ox  x ,1
+ooxxxoxxo,1
+o xxx xoo,1
+o   x oxx,-1
+x o  o  x,1
+xoxoo x  ,-1
+xoxooxx  ,-1
+ooxx xxo ,-1
+ x o o x ,1
+xx o o x ,-1
+x xo oo x,1
+oxx  o  x,-1
+oxx oo  x,0
+xxoxo  ox,-1
+  xxxooxo,0
+oxxxxooxo,1
+    ooxx ,1
+  x xoox ,0
+oxx    xo,-1
+xox   oxo,0
+xox x oxo,0
+oxx xoo x,-1
+   ooxx x,1
+o  ooxx x,1
+ xx   oo ,1
+o  x oxx ,-1
+o ox oxx ,1
+xxoxoo   ,1
+xxo  ooxx,-1
+xxoo ooxx,1
+ooxx  xox,-1
+ooxx oxox,1
+x o xoxox,1
+o x xo   ,1
+x xo ox  ,-1
+o ox  xxo,-1
+ooxx   xo,1
+ooxx  xxo,-1
+ox xoox x,0
+o    xx  ,0
+     o  x,1
+oox   xox,1
+x xoo xox,-1
+ xx  xoo ,-1
+o xox   x,-1
+x  oxox  ,1
+      o x,1
+      oxx,-1
+x  oox xo,0
+xx oxo  o,1
+oxox  xo ,0
+ o  xox  ,1
+ x xo oox,1
+xox  o ox,1
+xx     oo,1
+xx  x  oo,-1
+ o x ooxx,0
+ o xxooxx,0
+xxoxox  o,-1
+o  xxo xo,1
+o x xxoo ,1
+x x  oxo ,1
+xox  oxo ,1
+xxooo  x ,-1
+x ox    o,1
+ x  o xox,0
+ oxo xxo ,1
+oxx ox o ,1
+ xxo xxoo,1
+ox  o  x ,-1
+  oxx o x,1
+  xxxo  o,0
+  xxxoo o,0
+ooox x x ,-1
+ x   x o ,0
+xooo x  x,1
+  o o xx ,1
+  oxo xx ,1
+ox x  oox,1
+o     oxx,-1
+xxox oo  ,-1
+xxox oox ,-1
+xoo xx   ,1
+xoo xx  o,1
+xxoo  xxo,-1
+oo xx ox ,1
+ooxxx ox ,0
+oxo  xoxx,-1
+oxo oxoxx,-1
+  xoo  xx,-1
+o xoo  xx,1
+x  ox  xo,0
+x    xo  ,0
+x o  xo  ,1
+o o ox xx,1
+ xoxox   ,-1
+ xx oo x ,-1
+ooxxo oxx,1
+ooxxoxoxx,1
+x xo     ,1
+x xo    o,1
+x xxo oo ,1
+oxo o  xx,1
+oxo ox xx,-1
+ xxoxxoo ,-1
+ xxoxxooo,-1
+x xooxxo ,-1
+xoxooxxo ,-1
+  xx xo o,-1
+  xx xooo,-1
+o   xx xo,1
+  ooxx   ,0
+ o ox   x,1
+ o ox x x,1
+xxo xxoo ,-1
+xxo xxooo,-1
+oxoxx xo ,0
+o oxx oxx,-1
+x  o xo x,1
+x oxoxo  ,-1
+oxxx x oo,-1
+xx xoo ox,1
+ xo   ox ,1
+xxo   ox ,-1
+oxxo x o ,1
+  xox  o ,1
+oxo  x   ,1
+x oooxx  ,0
+ x x  oo ,1
+ oxx o ox,1
+ oxxxo ox,1
+oxoxoxx  ,-1
+oxoxoxx o,-1
+ xox xoxo,-1
+ oxoxx  o,1
+ o oxxox ,0
+ oxoxxox ,-1
+ o xo xxo,1
+o xx xo  ,1
+ xo xo x ,1
+ o  xo  x,1
+xo  xo  x,1
+oxx o x  ,-1
+xo x xo o,1
+xo x xoxo,0
+ x o x   ,0
+ x oox   ,1
+o oxx   x,-1
+ o  xxoox,1
+x  ooxo x,1
+        x,0
+  o     x,1
+  oxx oox,1
+o xoxxxo ,1
+oox xx xo,1
+xo    x o,1
+oxo    xx,1
+ oxox xox,1
+o o  xxxo,-1
+ x xo x o,-1
+x o  ox x,1
+xxoox    ,1
+  xx   oo,1
+xxoxx  oo,-1
+xxoxx ooo,-1
+ox xx o  ,1
+oxoxx o  ,1
+ x oo  xx,-1
+ox oo  xx,1
+oox xxox ,-1
+xxooxxo  ,1
+ xxo xo o,1
+xo o xxxo,0
+oo  xx  x,-1
+xxxoo x o,1
+  xxooxxo,-1
+ oxxooxxo,1
+  ox  oxx,-1
+  oxo oxx,-1
+oxx xxooo,-1
+x   x oo ,1
+ x  xoo  ,1
+  ox xxo ,1
+  oxoxxo ,1
+ x xox o ,-1
+ xoxox o ,0
+x o xoxo ,1
+xooo  xx ,1
+xo   o  x,1
+ oxxxoo x,0
+ooxxxoo x,0
+xxoox  xo,1
+x    xxoo,1
+ox oxo xx,1
+  x xooxo,1
+o  xxoxo ,1
+ooxox   x,1
+ooxoxx  x,1
+oxxo xxo ,1
+oxx  o ox,0
+x ox ox  ,1
+ xoo  xx ,1
+oxo xxox ,1
+ oxx oo x,0
+ oxx ooxx,0
+o  ox  xx,-1
+x xoxo xo,1
+o  xx xo ,1
+ o x  o x,1
+ oxoxxo x,1
+x ox   ox,1
+x   xo o ,1
+x   xo ox,1
+  xo  x o,1
+  xoox   ,1
+ xxoox   ,1
+ox o x xo,1
+oxxo x xo,-1
+x  xooxxo,1
+ o x  xxo,-1
+xox oox  ,1
+xox oox x,-1
+  xoxo  x,1
+x oo xox ,1
+ xoo  x x,0
+o o  xxx ,-1
+oxo o x x,1
+ o x x ox,-1
+ oox x ox,1
+  xxo o  ,0
+ x   o x ,-1
+ xxoo xo ,1
+xo  xoxxo,-1
+ ox  xxo ,-1
+xoooxxxo ,1
+xo ooxx  ,0
+xo ooxx x,-1
+  o xxxo ,0
+  o xxxoo,1
+oxoxx  o ,1
+ ox xxoo ,1
+ xoxxo   ,-1
+ xoxxo  o,-1
+oo oxxoxx,-1
+xox   ox ,0
+xox  oox ,0
+o    xxo ,1
+xxoxxoo  ,-1
+xox    o ,1
+oxx oox  ,-1
+   o  xox,1
+ x x o ox,0
+  xxx ooo,-1
+ox ooxxx ,-1
+ o ox  x ,1
+o xox xox,1
+ox oxxxo ,0
+o o xxxox,-1
+ooo xxxox,-1
+ o ooxxxx,1
+xo xo  xo,1
+xx xoxo o,-1
+   xxoo x,0
+xx   ooox,1
+ xx oxoxo,-1
+ oo x xxo,-1
+   oxx  o,0
+x  oxx  o,0
+  oxx o  ,1
+o  x xxo ,-1
+oxoxoox x,1
+ ooxxxx o,1
+xooooxx x,1
+ x    oxo,1
+ x ox  ox,0
+o x  x  o,1
+x  o  o x,1
+ oxxoxo  ,1
+xx  oo xo,1
+ o xxoo x,1
+  xx  o o,0
+  x x xoo,1
+ xo   xxo,-1
+oxo   xxo,1
+oo xoxx x,-1
+oxoxx ox ,1
+oo xxo x ,0
+oo xxo xx,-1
+ x o  x o,1
+xo  oxoxx,-1
+  o ox xx,-1
+x oooxxx ,0
+o ox  x  ,-1
+x    o x ,0
+  xx o  o,1
+ox xo o x,0
+xoxooxx o,0
+xoxooxxxo,0
+ x   oox ,1
+x  ox ox ,1
+o  ox oxx,-1
+ x xo o  ,0
+ x xo o x,-1
+xoo    xx,1
+xooo   xx,1
+  o xx   ,0
+x x oooxx,-1
+xoo x    ,1
+xxx o  o ,1
+ x o x  o,0
+ xxo  xo ,1
+x  xo ox ,-1
+x  xo oxo,0
+oxxx ooxo,1
+x   o ox ,0
+oxox ox x,0
+  x o xox,-1
+oxoxxo   ,1
+oxoxxo x ,1
+  oxox xo,-1
+x oxxoo  ,1
+ o  xxo  ,1
+   x   xo,-1
+xo x x oo,1
+xo xxx oo,1
+ xxo oxo ,1
+   o o xx,1
+xxx oo ox,1
+oo ox x x,1
+ x o x xo,0
+xxo x xoo,-1
+xxoooxxxo,0
+o oxxx ox,1
+xoox xxo ,1
+  o x  x ,0
+    oxoxx,-1
+   ooxoxx,1
+xoxo  x  ,-1
+x oxx xoo,1
+   ox x o,1
+x     xoo,1
+ ox oxx  ,-1
+  oxx xo ,1
+x  o  x  ,0
+oxoxox   ,-1
+ xxxooxoo,1
+  o x xo ,1
+o x  ooxx,0
+oxx xoo  ,1
+x   oox  ,1
+oxxo   x ,-1
+oxxxx o o,-1
+o  o   xx,1
+o  o x xx,-1
+ o o xxox,1
+oxoxo xx ,-1
+xxo    xo,-1
+x    o  x,0
+ o  xo xx,1
+ox xo  ox,0
+x ox     ,1
+o   xo  x,1
+x  o x   ,0
+x oo x   ,0
+x xxooxo ,1
+xx xoox o,1
+ xo  ooxx,1
+xxxo ox o,1
+ ooxx xxo,-1
+ ooxxoxxo,-1
+ x xxoo o,1
+ox   xoox,1
+xox  ox o,1
+xoxx ox o,1
+xxx ooo x,1
+ x o  oxx,-1
+ oox xoxx,-1
+xx  ooxo ,1
+ o  x  xo,0
+ x xo xoo,1
+ooxxxox  ,1
+xo o x ox,1
+xoxo x ox,1
+ xo xo   ,1
+ xo xo  x,1
+x  xoxo  ,-1
+ooxx  ox ,1
+ooxx xox ,1
+ooo xx x ,-1
+ o xx o  ,1
+xxo oxoxo,-1
+oo xxx   ,1
+oxo xoxx ,1
+x   o  x ,0
+x oo x xo,0
+xxxo o   ,1
+xxooxxo o,1
+o  x xo  ,1
+ ooxx x o,1
+o x xooxx,-1
+x  xoxoox,-1
+ooxx xo  ,1
+ooxxxxo  ,1
+o x xx  o,1
+ox   xx o,-1
+xoxx o   ,0
+xoxx oo  ,0
+x  x o  o,1
+ xoo xxox,0
+ x  ox  o,0
+ xx ox  o,-1
+oxoxx xoo,1
+xox xooxo,0
+ xx  oo x,0
+xox ox   ,-1
+xox oxo  ,1
+xx ox oxo,1
+x  oxxo o,0
+oo xox  x,1
+ x  x oox,0
+o  xxo x ,0
+oxox xo  ,1
+xx oo o x,1
+ xxoo    ,1
+o x   oxx,-1
+x  ooxxo ,0
+ xo  x o ,0
+oxo  x ox,0
+ooxx oxx ,1
+o  oxx xo,1
+oxx   xo ,0
+oo   xxxo,-1
+oo  xxxxo,-1
+ x xoxo  ,-1
+ xoxoxo  ,-1
+o xox x  ,1
+x  oox x ,0
+  o x oxx,1
+  oox oxx,1
+ xxoo x o,1
+   x  oox,1
+ o ox xx ,1
+o  o xx  ,1
+   xoox x,1
+  xoxx  o,-1
+   ox ox ,1
+o  ooxxx ,1
+o xoxo x ,1
+oxx  oo x,0
+ oxxx oox,1
+xooxo x x,1
+ xxx o  o,1
+xooox  xx,1
+ox     xo,1
+ox  x  xo,1
+    xo x ,1
+o x o xx ,-1
+o xxox ox,1
+x  ox  ox,1
+x xoo oxx,-1
+ xx xoo o,1
+ooxoxxxxo,1
+   xoxoxo,-1
+ooxo x xx,1
+oxoxoxxo ,0
+xxxo  xoo,1
+xxo  ox  ,-1
+xo xo xxo,1
+xo xxo  o,1
+ooxxoxx  ,-1
+ooxxoxxo ,-1
+ o  x   x,1
+oxooox xx,1
+oxoooxxxx,1
+ x x oxoo,1
+xxoo  ox ,1
+xxoo     ,1
+xo o xx o,0
+x oo  x x,1
+xxx o xoo,1
+o   xx   ,0
+xxo o xxo,-1
+oo xoxx  ,-1
+x xxoooxo,1
+xooox xxo,0
+ooxooxxxx,1
+ ox xx oo,1
+ o  xoxox,1
+  x x oxo,0
+oxo xo xx,1
+ xox o ox,1
+xo   xx o,0
+xxox ooxo,-1
+x  ooox x,-1
+xx ox   o,1
+x ox  o  ,1
+oox  x xo,1
+xoooxoxxx,1
+  o x   x,0
+ oo x   x,1
+ xoo oxx ,1
+x  oxox o,1
+xx oxox o,-1
+ x oo  x ,-1
+ x oox x ,-1
+xxoo xo  ,1
+x ox  o x,-1
+ xo  xo  ,1
+ ox xo  x,1
+x   oox x,-1
+x o oox x,1
+xoxoo  xx,-1
+xo o  xxo,0
+o xxo    ,0
+x o    x ,0
+ xx o oxo,1
+ o xo oxx,0
+xo x o   ,1
+xo xxo   ,1
+ xox  o  ,1
+oo x xx  ,-1
+ooox xx  ,-1
+oxx  xoox,1
+oxoxo xox,0
+xxoxoxo o,-1
+o  ox x  ,1
+xo  x oxo,0
+xo oxox x,1
+xo x oxox,1
+oooxxo xx,-1
+o x  o xx,0
+ox o xxox,0
+  x xoxo ,1
+xoxox o  ,1
+xoxox o x,1
+xo      x,0
+ oxox   x,1
+ooxx xoxo,1
+ooxxxxoxo,1
+  x o xo ,0
+xoo  x ox,1
+x xxo oxo,0
+ oxxooxx ,1
+xxox oo x,-1
+xxox ooox,1
+xxxo  oxo,1
+o    x ox,1
+o    xxox,0
+    xxxoo,1
+ oxxo x o,1
+ x    o x,0
+xxxo    o,1
+  xooox x,-1
+ xooxx o ,0
+x   o xo ,1
+xoxx o ox,-1
+x oo xx  ,0
+oox x x  ,1
+  ox  x o,1
+ x o xox ,-1
+xooo  x x,1
+xooo  xxx,1
+ xx o  ox,1
+ xx oo ox,1
+  xoxoxxo,1
+   oxox  ,1
+ x o ooxx,1
+ox oxo  x,1
+xx oxxoo ,-1
+  x    xo,0
+  x   ox ,0
+    ox xo,0
+  x  ooxx,-1
+ x  x   o,0
+xx oox o ,1
+xx ooxxo ,0
+o ox  x x,-1
+xxx xoo o,1
+ o x  ox ,0
+ x   x oo,1
+ x  xx oo,-1
+o  xoxx  ,-1
+o  xoxxo ,-1
+ xoxo  xo,-1
+oxxxxoo o,1
+xoox     ,1
+  xoxxo  ,-1
+xo o x   ,1
+ oxx o  x,0
+ xo  xoox,1
+ x x oo x,0
+x x ooxo ,1
+ x o  ox ,1
+xooxox  x,-1
+xxx   oo ,1
+x xxoxoo ,-1
+xx oo x o,1
+xoxoox   ,1
+xxoox ox ,1
+oxox o x ,1
+oxxxoo xo,-1
+  xx oxoo,1
+  xxxoxoo,1
+ x o x ox,0
+ x o x o ,1
+oox  xx  ,1
+o   xoxox,1
+x   x oox,1
+xo x xxoo,1
+oxxx ooox,0
+ xxxo xoo,-1
+o x  xo x,1
+ xxxxo oo,-1
+o  xxoo x,0
+x o x xoo,1
+x  xoxoo ,-1
+oxx x o  ,-1
+xox o x o,1
+ xo ooxx ,1
+ xoxooxx ,-1
+xxx oo   ,1
+x    oxox,1
+o  oxxxox,0
+x  xox o ,-1
+  xo oxxo,1
+x xo oxxo,-1
+xxo oxx o,0
+xxo oxxoo,1
+x   xoo x,1
+x o ox  x,-1
+x xxoo   ,1
+x x x ooo,-1
+xoxxo   o,1
+x   ox ox,-1
+xo  ox ox,-1
+x  o ox x,-1
+x oo ox x,1
+xoo ox x ,1
+xooxox x ,-1
+ xx oxo o,1
+xoo x ox ,1
+xoo xxox ,1
+ x  x  o ,0
+ x oxxo o,1
+x ooxoxxo,-1
+x  o xxoo,1
+xo  xxoox,1
+xx  xo o ,1
+xx x ooox,1
+ooox xxox,-1
+xxx  o o ,1
+ oxoxo x ,1
+x x oxoo ,1
+  o oxxxo,0
+xx  xooox,1
+x x  o  o,1
+x ox xo  ,-1
+xooxo  xx,-1
+xooxo oxx,-1
+o x o x x,1
+ oooxxxxo,0
+ x   oo x,1
+oxx   oxo,1
+xooxoxxxo,1
+  oxo xox,1
+ox xxo xo,1
+oo xx xox,-1
+ oxx  ox ,0
+ oxx  oxo,0
+x x  xoo ,-1
+o  x  o x,1
+o xx o ox,0
+xooox  x ,1
+ox   x o ,0
+xx    oxo,1
+oxx xoox ,1
+  o xoxxo,-1
+o x  x ox,1
+oxo  x x ,-1
+x  x ooox,1
+xx o x  o,0
+ox xo  xo,-1
+  x oxo  ,1
+  xxoxo  ,-1
+ o x xo x,1
+ x oxo x ,1
+o o  xoxx,-1
+x   xooxo,1
+o   ox  x,1
+x o  xx o,0
+x o  oxxo,-1
+o oxxoxxo,-1
+ ooxxxox ,1
+ xxooxo  ,1
+ xxooxo x,1
+ oo xx  x,-1
+  xoxoox ,1
+oxxxooxo ,0
+  oxxo xo,-1
+xx    o  ,1
+    x oxo,1
+x  xooxox,1
+  xoxoo x,1
+  xx  xoo,1
+x   xxoo ,-1
+o xox  xo,1
+xox xox o,1
+ oox o xx,1
+ xo x ox ,1
+o   o xx ,1
+o  ox xxo,1
+oxx o  ox,1
+ ooxx xo ,1
+xx o ooxx,-1
+xx ooooxx,-1
+xx   ox o,-1
+oxo   x x,0
+oo  x  x ,0
+o   xoxxo,1
+xxo ox xo,-1
+x   ooxx ,-1
+x  o xoxo,1
+oxox  xxo,-1
+oxoxo xxo,-1
+ xo x xoo,0
+x xxoo ox,-1
+x x xoo o,1
+xooxx  ox,1
+ oxx x  o,-1
+ oxx x oo,1
+o xxxoxo ,1
+o  xxxxoo,1
+  oxxoxox,0
+oxxo   xo,1
+  ox xo x,-1
+  oxoxo x,-1
+  o o xxx,1
+ox   x ox,0
+ xox xoo ,1
+ xoxxxoo ,1
+xooxoxo x,-1
+o xoxx o ,1
+xo o   xx,1
+ o xx  ox,1
+  x o oxx,0
+o x o oxx,1
+ xooxoxox,1
+x  oooxx ,-1
+o oxxooxx,1
+ x o ox  ,1
+ox xxxoo ,1
+o x xxxoo,1
+ x  oxox ,-1
+ x ooxox ,-1
+o  oxxxxo,1
+ o  o  xx,1
+oxxooxxo ,1
+oo oxxx  ,1
+x  oxooxx,1
+ xo  xxoo,1
+xx  o xo ,1
+ox  oxxo ,0
+o  oxx   ,0
+ xooxxo  ,1
+ xxoxox o,1
+xoox x ox,-1
+xxxxo oo ,1
+ xx xooo ,1
+o     x  ,1
+ xoo xxo ,0
+ox  xox o,1
+ o  xxoxo,1
+oox xoxx ,1
+xoxxoo  x,-1
+x    oxo ,1
+x  x oxo ,1
+ x x  oox,1
+  o oxxx ,0
+  oooxxx ,1
+xxo xoxoo,-1
+oox xxxo ,1
+o  o xxx ,1
+xo   oxx ,1
+x o  x xo,0
+o  oxxox ,-1
+ xxo  oxo,1
+ xxo xoxo,-1
+  oxo x  ,1
+xoxo xo  ,1
+oxo x xxo,1
+ xo oxox ,-1
+xox o    ,0
+ oo  xxox,-1
+xoo  xxox,-1
+ oxxo xo ,-1
+x      xo,0
+x o  xxo ,0
+xoxoxo x ,1
+ooo xx  x,-1
+  ooxxoxx,-1
+xox ooxxo,1
+xo oxo x ,1
+xx oo oxx,-1
+xo x   xo,0
+ox oxx ox,-1
+xxo o  ox,0
+xxo o xox,0
+oxxxoooxx,0
+ox   x xo,-1
+o    x  x,-1
+x oxoxoxo,-1
+ x ox   o,1
+   xx o  ,0
+  o xo  x,1
+xo  oxxo ,-1
+x o x xo ,1
+oxoo xxx ,1
+xox  ox  ,1
+ox ox    ,1
+  xxoo x ,0
+xo   x xo,0
+ ox  xo x,1
+   xo oxx,-1
+o    xo x,1
+xo   x ox,-1
+x xx   oo,-1
+x xx o oo,1
+x o x ox ,1
+x xoxx oo,-1
+ xx  o ox,0
+ xxxo oo ,1
+ox x xoo ,1
+xoox xoox,1
+xo  x ox ,0
+x x o  xo,0
+ x  xo  o,1
+x ox o   ,1
+x xoxxo o,-1
+ o xox ox,-1
+xo oxox  ,1
+o xxx   o,1
+o   x xo ,1
+x oxox o ,1
+xoxox oxo,0
+xxxoox o ,1
+ooxx  x  ,-1
+ooxx  xo ,1
+xo oxx ox,1
+xo xx o o,1
+ xoox xo ,0
+x oox xo ,1
+o x x oxo,1
+ xx xo oo,1
+xxoxox oo,1
+oo xx oxx,-1
+  xoxo x ,1
+ox  ox  x,0
+xxo ooxx ,-1
+ xx x o o,-1
+x  xoo ox,1
+xxoxoxxoo,1
+  oo xxxo,0
+ xxoox ox,1
+o xooxxxo,-1
+xoxo  x o,1
+  xoxx oo,1
+ xoxo o x,-1
+x xoo o x,1
+x xooxo x,1
+ ox xxxoo,1
+   ooxxox,1
+  xooxxox,1
+o  x o x ,0
+ oox    x,1
+oxx    o ,0
+oxx x  o ,-1
+oxoxo  xx,-1
+xox x  oo,1
+xox x xoo,1
+x x o oox,1
+xoxo ooxx,1
+o xxx  oo,1
+ xo xox  ,-1
+ x xx oo ,-1
+oxx x oo ,-1
+oxx   oox,1
+oxoxoo xx,1
+   oxxoxo,1
+x o x o  ,1
+x o xxo  ,1
+xo xoox x,1
+ox xoxxo ,-1
+ o oxx x ,-1
+ o ox oxx,1
+o  xoxxox,-1
+x xoxooxo,1
+o  o xxxo,1
+  xxo oxo,0
+xoo oxx x,-1
+oo  xoxx ,1
+oo  xoxxx,1
+ xxx ooo ,1
+ xox xxoo,1
+ xoxoxxoo,1
+xo xxoxo ,1
+ ox ox x ,0
+xoo ox xx,-1
+xo o    x,1
+xo ox   x,1
+xox o xxo,0
+o x ox  x,1
+ xx oxo  ,1
+xooxxxo  ,1
+ xo xxxoo,0
+ xoxoxoxo,-1
+oxxoox x ,-1
+oxxoox xo,-1
+oooxxox x,-1
+x   x  o ,1
+ o  x xo ,1
+x xox oox,1
+ x  o    ,0
+ xxox oxo,1
+x x  oxoo,1
+  o xxo  ,1
+ oooxxxx ,-1
+ox xo  x ,-1
+ o xxxoxo,1
+ooxxo x  ,-1
+x oxxo   ,-1
+ ox x ox ,0
+o  xo x  ,0
+ox o  x  ,1
+ox o  x x,1
+xooooxxx ,1
+xooooxxxx,1
+ oo xxo x,1
+xoxxo x o,1
+o x xxo  ,-1
+ o xx oox,1
+oxo   xx ,1
+o xx xo o,1
+   oox x ,1
+   x xoo ,1
+ x x xoo ,-1
+xxox  o o,-1
+x   oo  x,0
+ox x x o ,0
+ x   o xo,1
+ox   o x ,1
+o   xxo  ,1
+  xoxxxoo,1
+ooxox x x,1
+xxo  oox ,1
+x oooxxxo,0
+o oox xx ,1
+o xo  oxx,-1
+oxox xx o,-1
+o xox  ox,1
+x  xo o x,-1
+  x  xo  ,-1
+oox x xox,1
+  xxx o o,-1
+o x x xo ,1
+o xxo xox,-1
+xoo x x  ,1
+xooox x  ,1
+oxox oxx ,-1
+       xo,0
+o x oo xx,1
+o x ox x ,-1
+o x ox xo,-1
+ox o xxxo,-1
+xooxx  o ,1
+o xo  x  ,1
+ x  x oxo,1
+xxoox  ox,1
+ oooxx xx,-1
+oxx xo ox,0
+ xxoox xo,-1
+oox  xxox,1
+  xx oo x,0
+ o   x   ,1
+ ox xo xo,1
+x o  xxoo,1
+x o xxxoo,0
+xo oxxxoo,1
+ x  oxo  ,1
+ o xox xo,0
+o oxoxoxx,-1
+ xox  oox,1
+xx  xo oo,1
+ox  x xoo,1
+o xxx oxo,1
+xxooo xxo,0
+ x oxo   ,1
+ xoxx  oo,1
+ xxo ooxx,-1
+o xox o x,-1
+xx o xo o,1
+ oxoo xx ,1
+xxxoo    ,1
+xox x   o,0
+xx o     ,1
+xxo x oxo,1
+xoxxooxxo,1
+ox  oxoxx,-1
+xx oo ox ,1
+xo  x  xo,0
+ox  ooxx ,1
+o ox xx  ,-1
+xx oxx oo,-1
+x   oo x ,0
+oxxoxxo o,-1
+x oxoo xx,-1
+x oxoooxx,-1
+ o o  xxx,1
+o x      ,1
+xoo xxo x,1
+    o  x ,0
+xxxx ooo ,1
+xo   x o ,1
+oxo oxx  ,0
+ xox oo x,1
+x xo x o ,1
+xx oox  o,1
+ x xxooo ,0
+xxoooxo x,-1
+xooxox   ,1
+oxx ox  o,-1
+x oxxo  o,-1
+oxx x  oo,1
+xxoo ox x,-1
+x  xxooo ,1
+  xo xxoo,1
+xxxox  oo,1
+xx oxo xo,1
+ o oxxxxo,0
+oxxo  o x,-1
+xooox x x,1
+ x  o   x,0
+ xoo  xxo,1
+ o xxoxox,1
+o xxxx oo,1
+oo x x   ,1
+ x xoo xo,-1
+xx xoo xo,-1
+ oox ox x,1
+ ooxxox x,-1
+oxxxo    ,-1
+xo xxoo x,1
+  xo   xo,1
+oxoxxxo  ,1
+o    x   ,1
+o  x x   ,-1
+ oxo x  x,1
+x xo xxoo,1
+o  ooxxxx,1
+xo  ooxx ,1
+ xooxxoox,1
+ o xxo  x,0
+ o xxo ox,1
+o x xxoox,1
+x  xxooox,1
+xx  oox o,1
+  xxo xo ,-1
+ o x xox ,0
+ o xoxox ,0
+ ox xo ox,1
+xox xo ox,1
+ooxx   x ,1
+ooo x x x,-1
+ooxo xx x,1
+x  o ooxx,1
+xooxxxoox,1
+ ooxxxxo ,1
+     xxoo,1
+ o o xoxx,1
+ox xoxo x,-1
+x xo ooxx,-1
+x xooooxx,-1
+xoxoooxx ,-1
+ oxx oxox,-1
+   xx oxo,1
+xo x o ox,1
+x xooxox ,1
+oxxxooox ,0
+  x oxo x,1
+ x xooxo ,1
+oo xxo  x,0
+ xx  o xo,1
+x xoxxoo ,-1
+x xoxxooo,-1
+ox oo x x,1
+  x  ox  ,0
+xo o  xx ,0
+xo o oxx ,1
+x  xo  xo,0
+xx oo xox,-1
+o oo x xx,1
+ox xxo  o,1
+  ooxx ox,1
+o xo x xo,-1
+o xo xxxo,-1
+x  ox o x,1
+x ooxx ox,1
+ oxoxo xx,1
+xo  x  ox,1
+ ox o  xx,1
+   ooxxx ,0
+ x  oxxo ,0
+oxoooxxx ,1
+x  xx  oo,-1
+oxo  xo x,-1
+ oxxoox x,-1
+ oxxooxox,-1
+ x o ox x,-1
+o  xox   ,-1
+o xxox   ,-1
+ xoo    x,1
+ xox x o ,0
+  o   xox,1
+  oxx x o,-1
+ xx oox o,1
+xxx oox o,1
+ xoxxoxoo,-1
+ xox x oo,1
+x x   xoo,1
+oo xoxxox,-1
+ x    x o,0
+oo  xx   ,1
+  oxxxoxo,1
+xox   x o,1
+ xo oxx o,0
+ xoxoxx o,-1
+ xooxx xo,1
+ooxx xo x,1
+ox ox xxo,1
+ oxxoxxoo,-1
+oxo x o x,1
+oxo x oxx,1
+xoxxx ooo,-1
+o xx xoox,1
+  ooxxx o,0
+ xxox oo ,1
+o  xxo   ,0
+oo xxxxo ,1
+oxxo xoxo,-1
+xxoo  xox,0
+oo ox  xx,1
+oo  xo xx,1
+xx o xoox,1
+  xoxo xo,1
+x o xxoo ,1
+oxoo x x ,1
+oxoo x xx,-1
+x x xooox,1
+ oxxo ox ,0
+o xoox xx,1
+xo xxo ox,1
+x ox o x ,-1
+ x xoox o,1
+o xo xox ,-1
+ oxxxoxo ,1
+xo oxxx o,0
+xxoooo xx,-1
+o oxoxx  ,-1
+  x o ox ,0
+xoxoxo   ,1
+oxxxoxo  ,-1
+  xox  xo,1
+ x oxoxxo,1
+ooxox  x ,1
+x x oxoox,1
+ooxox xx ,1
+oxxo x  o,-1
+xx   x oo,-1
+ox   ox x,0
+oxoxoxo x,-1
+ oox xx  ,-1
+xoo     x,1
+xxo  xxoo,0
+o oxoxxx ,-1
+oooxoxxx ,-1
+x  o xxo ,0
+ox xoooxx,0
+xooxx o x,1
+oxxo o xx,-1
+oxxooo xx,-1
+xx ooox  ,-1
+  oox xx ,1
+ ox x  xo,0
+ xxoxo xo,1
+ ox  o xx,0
+xoxxo oxo,0
+oxxxxooo ,0
+xx o oxo ,1
+ xo xxoxo,1
+ oo  xx x,-1
+      x  ,0
+ xx  o  o,1
+o ox x   ,1
+ oo  xoxx,-1
+ox  o xox,0
+ ox o xox,-1
+o  xox ox,1
+ ox xox  ,1
+xxxoo ox ,1
+ x oxxoo ,-1
+ x o oxox,1
+xooxxo   ,1
+xxo x oo ,1
+x xoooxox,-1
+ooxxx xo ,1
+x oxoxxo ,1
+o xxoox x,0
+o xxooxox,0
+xxx ooxo ,1
+xooxxx o ,1
+xoxx xooo,-1
+xoo x   x,1
+xxo  x  o,-1
+xoo xx o ,1
+ xoxox  o,-1
+xxo ox   ,-1
+ xxxoo o ,1
+ xo o  xx,-1
+ x ooxo x,1
+xxo x oox,1
+oxoxx o x,1
+ox  xx o ,0
+xoxxoxo  ,-1
+o x  x xo,-1
+ox oox xx,-1
+ oxoxoxx ,1
+ xoxx   o,-1
+xooox xx ,0
+xo x  x o,1
+ x ox oox,1
+xx ox oox,1
+x oxxo ox,1
+o xxx oox,0
+ox xo x  ,-1
+xoxoxo xo,1
+ox oxx xo,1
+xxxxo  oo,1
+o xxxo ox,0
+xo ox xox,1
+xx xxooo ,-1
+xx o x oo,1
+ox xoxo  ,-1
+x ooxoxx ,-1
+      xo ,1
+x    xo o,0
+ox o   xx,-1
+xx x ooo ,1
+xxxo   o ,1
+x  ox xoo,1
+  ox  xo ,1
+  oxxo  x,0
+   xo   x,0
+oxox  xox,0
+oxox oxox,0
+ oxo    x,1
+  xoo x  ,0
+x  x  oxo,-1
+o xoxooxx,-1
+o xxxoo x,0
+oxxo x ox,1
+ x  xoox ,1
+x  o x xo,0
+xo xxoo  ,1
+ xo xoo x,1
+ o  ox  x,1
+  o o  xx,1
+  oxo  xx,-1
+xx o  o  ,1
+xo oo xx ,1
+o x o   x,1
+oxxo o  x,-1
+oox o xxx,1
+o xooxx x,1
+x  ooxxxo,0
+ oox oxxx,1
+ooxoxx   ,1
+xx  xooxo,1
+  ooxxox ,1
+xxo  xo o,-1
+x xoxoo x,1
+  xoxooxx,-1
+x  o oxxo,-1
+xoxx  o  ,-1
+ oo x oxx,1
+xxo   oxo,1
+ xoxooxxo,-1
+ ox x xo ,1
+ x o  xox,0
+  xoxxoox,1
+oxxo ooxx,-1
+    oxo x,1
+xox x oox,1
+xooxooxxx,1
+xxooxxoox,1
+o     xox,1
+xo x o  x,1
+ox oo xx ,1
+o oxxxxo ,1
+xxox  oxo,-1
+xx   o o ,1
+o oxoxxxo,-1
+oxx x oxo,1
+ x o  xxo,-1
+  x oo  x,0
+  xx xoo ,-1
+oo ox xxx,1
+o  ox x x,1
+xx  ooxxo,-1
+o x oxox ,1
+  oxxox o,-1
+ooxoxo xx,1
+ooxoxxox ,-1
+ xoxx xoo,-1
+ xxx  ooo,-1
+  o x ox ,1
+ o ox xox,1
+ xoox o x,1
+xxooo x x,-1
+xoo  oxxx,1
+x oxxoxo ,1
+o x ooxxx,1
+x ox oox ,-1
+x oxxoox ,-1
+xoxx xoo ,-1
+oxo xxxoo,1
+o  xxo ox,0
+o ooxxxx ,-1
+ooooxxxx ,-1
+o oxxx   ,1
+xo xoxx o,1
+x  xoxxoo,1
+xo  o oxx,0
+   o xox ,1
+   x  o x,0
+ x oxooxx,1
+xoxxo o  ,0
+  oxxoox ,1
+xoxoo xox,-1
+o xoxx   ,-1
+xxo      ,-1
+oxxoxox  ,1
+ oo ox xx,1
+xox ooxx ,-1
+xxoxo xo ,1
+x xoo xxo,-1
+x xoooxxo,-1
+xooxxoox ,1
+ o x x o ,1
+  xoo   x,1
+ oxx xxoo,-1
+ooxx x  o,1
+o oxx  x ,-1
+ oxxxx oo,1
+xo  ooxxx,1
+xxo oooxx,-1
+xx xo oox,-1
+ o xxxxoo,1
+o  xxxoox,1
+x x oxo  ,1
+x xooxo  ,1
+xoxxoo ox,-1
+ x  o  x ,-1
+xo xooxx ,1
+  oxoxxxo,-1
+oxoox  xx,1
+oxo  oxxx,1
+xxooxo  x,1
+x ooxox  ,1
+x ooxox x,1
+ oxox x  ,1
+   xx oo ,1
+ooxxox xo,-1
+ox o x ox,1
+ xxx oxoo,1
+oxo  o xx,1
+ oxoo  xx,1
+o ox ox x,1
+ooxox  xx,-1
+ooxox oxx,-1
+ooxxxoox ,0
+   xox ox,-1
+ oxx   xo,0
+xoxo x   ,0
+oxoooxx x,1
+  xoo x x,-1
+oox x  ox,1
+oox xx ox,1
+o ooxxxxo,1
+xo xxxo o,1
+ ox x oxo,0
+oxo xx xo,1
+oxx o   x,0
+ oxoxo  x,1
+ooo xxx  ,-1
+ox xo x o,-1
+ x xxoo  ,0
+oxx xx oo,-1
+ o xx oxo,1
+oxoo xxxo,1
+xox   o x,1
+oo  oxx x,1
+xxxxoo  o,1
+x ox o xo,-1
+x oxoox x,1
+xoxoxo  x,1
+xoo xox x,1
+ox  xx oo,1
+  xo xx o,0
+xxxxoooox,1
+oo xxx xo,1
+o x   ox ,0
+xxxo xo o,1
+ xoxx oxo,1
+oo oxxxox,1
+ o xx xo ,1
+xxx xo oo,1
+xo  xo xo,0
+ xox    o,-1
+o x   xxo,-1
+oxooxox x,1
+oxooxoxxx,1
+xoo x  x ,0
+ oxxoo x ,1
+  ooxoxx ,1
+o x xox  ,1
+  oxxxo  ,1
+x oxx oox,1
+oxoxo oxx,-1
+oox xox x,1
+ xx xoxoo,1
+xxx  oo  ,1
+ ooxoxx  ,1
+xooxoxx  ,1
+ xooxxox ,1
+xox  o xo,1
+x xoox ox,1
+ooo  xxx ,-1
+xxo o ox ,-1
+  ox oxxo,-1
+ xx    oo,1
+ooox  xx ,-1
+ x o xo x,-1
+ xo xxo o,1
+oo xx x o,1
+ooxxx x o,1
+xoxox x o,1
+xxox o  o,-1
+o xx  ox ,0
+ x xoxoox,-1
+ xoxoxxo ,0
+oxxox  o ,1
+ xo xooxx,1
+ xo   o x,1
+x oxxx oo,1
+o oo xxxx,1
+xox xo xo,0
+ oxx o   ,1
+  ox ox x,1
+o xxxooox,0
+xoxo xxo ,-1
+ x    xo ,0
+x o    xo,0
+o ooxxoxx,-1
+  xox xo ,1
+ xx  ooox,1
+oox    x ,1
+x  xoxoxo,-1
+xxx  o  o,1
+ x  oo x ,-1
+ xoo  xox,0
+oxxxxoxoo,1
+oxx xox o,1
+xxxoxooxo,1
+ox  xo x ,1
+xo x ox  ,1
+ x xoxoo ,-1
+x xx oxoo,1
+ooxxooxx ,1
+x o xxo o,1
+ooo  xx x,-1
+xoxo ox  ,1
+oxo    x ,1
+xoo xoxxo,-1
+xoxoxox  ,1
+xx oooxxo,-1
+xxoo xoox,1
+x  x  xoo,1
+ooxoxx x ,-1
+x  x o ox,1
+ xo xxoox,1
+xoxxxoxoo,1
+ox oxxoox,-1
+x o ooxxx,1
+x x o ox ,0
+ox xox o ,0
+ oxoo xxx,1
+xxoo oxox,1
+xo xxxoo ,1
+  o oxoxx,-1
+xxx  ooox,1
+ o  o xxx,1
+ o xxx o ,1
+ xx o o x,1
+  xo x  o,0
+oxxoo xxo,-1
+x x oo   ,1
+ o xxxo  ,1
+ o xxxoox,1
+oooxx oxx,-1
+xoox ox x,1
+ oxo xoxx,1
+oxxo    x,-1
+x o x o x,1
+ x  o o x,1
+x  xo x o,1
+x xo  oox,1
+xxxo  oox,1
+ oxx xoxo,0
+x x xooxo,0
+oxoxxxxoo,1
+xo x  ox ,0
+xox xxooo,-1
+xox oxoxo,0
+ xoxox ox,-1
+ xx ooxox,-1
+xoo  xo x,1
+xo xox xo,0
+xooxox xo,1
+x ox oxox,1
+ ox ox  x,1
+o xxooxxo,-1
+ox   xoxo,1
+ooxxx   o,1
+xx oooxox,-1
+xooxox ox,-1
+ oxxxoo  ,0
+oxxoox  x,1
+oxx o x o,-1
+xooo xxox,1
+xoooxxxox,1
+x oxxooxo,-1
+o xx oxxo,-1
+ oxxo  ox,-1
+xoxo  xxo,0
+ xxoooxox,-1
+o xxxo  o,1
+  xxoxoox,1
+ xx x ooo,-1
+ox    oxx,-1
+ox o  oxx,-1
+ox   oxxo,1
+xxxooxo  ,1
+  oxxx o ,1
+ooxoxxxox,1
+ooxo xxxo,1
+ooxx x xo,-1
+ooooxx xx,-1
+oxxox xo ,1
+o o x  x ,1
+o xoxxo  ,-1
+ xxooox  ,-1
+xxooo xox,0
+oxoxx oox,1
+oxoxxxoox,1
+oxxo  xo ,1
+o    oxxx,1
+ xoxxooox,1
+ x ooox x,-1
+ x ox ox ,1
+ xxoooxxo,-1
+xxx o   o,1
+ xo xox o,-1
+oo xxxox ,1
+xo   ooxx,1
+xo  xooxx,1
+ xo o oxx,-1
+xxxo oxo ,1
+xxoo oxxo,-1
+ xxooo  x,-1
+ox oo xxx,1
+xoxo  xox,-1
+xxoxo x o,1
+oxoxxxoxo,1
+xoxxoxoxo,0
+x ox  oox,1
+xo o oxxx,1
+xxo o xo ,1
+xxo xoox ,1
+  oxo x x,1
+xoo oxoxx,-1
+o xxxox o,1
+x x  ooox,1
+ooo x xx ,-1
+x o oxo x,-1
+x xoxo ox,1
+ o xx  xo,0
+xo ooxxox,-1
+ xx  xooo,-1
+  xooxx  ,0
+xo oxxoxo,0
+xx   oo x,1
+oxoo xoxx,-1
+o oxx xo ,1
+ooxxoxx o,-1
+oxxox  xo,1
+ oxxox o ,-1
+xxoxoo xo,-1
+ ox xxoox,1
+oo  x   x,1
+oxxoo xox,1
+oxooxx x ,1
+xx  oo ox,1
+xxoox o x,1
+o  xxxo  ,1
+xoo xx ox,1
+xx  oooxx,-1
+xx o oxox,-1
+ o xo xox,-1
+xxo ooxox,1
+ox   oxx ,1
+ x ox  xo,1
+x ooo xxx,1
+  oooxxxx,1
+  x x o o,0
+ ooxxx ox,1
+oxxo  ox ,-1
+xo x  xo ,1
+ oxoox xx,1
+oxxooox x,-1
+xxooox ox,0
+ o  oxxox,-1
+xox  ooxx,0
+x oxxxoo ,1
+  ox oxox,1
+xxox oxo ,1
+o   o xxx,1
+xoox x xo,1
+ooox xoxx,-1
+xxxooxoox,1
+xxooxoxox,1
+xoxxoxoo ,-1
+x oxo o x,-1
+xoxoxooxx,1
+ ox  ooxx,0
+xox o  ox,-1
+ oxo xxox,1
+ooxxox  x,1
+xxx o o  ,1
+o x o xxo,-1
+ o xx xoo,1
+xo xx xoo,1
+x x  xooo,-1
+xx xo xoo,1
+ox o xo x,-1
+oxxxox oo,-1
+oxo x  x ,1
+xxo ooxxo,-1
+xxxxooxoo,1
+ox  xoxxo,1
+xxx ooox ,1
+xxooxxoxo,1
+ ox x oox,1
+xoxoxoxox,1
+xxooxooxx,1
+xoxoxxoox,1
+ooxoxoxxx,1
+  xox x o,1
+oxxoxoxxo,1
+ooxxxxxoo,1
