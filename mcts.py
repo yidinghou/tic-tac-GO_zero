@@ -40,14 +40,15 @@ class MCTS():
             nodes.Q = (nodes.W - nodes.L)/nodes.N
             nodes.Q = nodes.Q/2 + 0.5
 
-    def PUCT_function(self, bool, N, edge):
-        if bool == -1:
-            Q = 1 - edge['Q']
-        else:
-            Q = edge['Q']
 
-        puct = Q + self.PUCT_CONSTANT * edge['P'] * np.sqrt(N) / (1 + edge['N'])
-        return puct
+def PUCT_function(PUCT_CONSTANT, bool, node):
+    if bool == -1:
+        Q = 1 - node.Q
+    else:
+        Q = node.Q
+
+    puct = Q + PUCT_CONSTANT * node.P * np.sqrt(node.N) / (1 + node.N)
+    return puct
 
 
 def print_edges(edges):
@@ -109,6 +110,7 @@ class Node():
         self.P = 0
         self.Q = 0
         self.N = 0
+        self.PUCT=0
         self.Turn = 0
 
         self.board_arr = Board.str2arr(id_)

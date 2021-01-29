@@ -50,6 +50,7 @@ class Zero_Player():
         self.type = Board.STR2INT_MAP[type]
         self.name = name
         self.temperature = temperature
+        self.tree = {}
         self.value_estimate = ""
 
     def load_keras(self):
@@ -110,39 +111,33 @@ class Zero_Player():
             illegal_moves = np.where(board.board.ravel()!=0)[0]
             possible_moves = np.where(board.board.ravel()==0)[0]
             x_inp = np.stack([[board.board]], -1)
-            pred_winner, prior_prob = self.keras_nn.predict(x_inp)
-            prior_prob = prior_prob[0]
+            pred_winner, prior_prob = 0, np.zeros(9)
 
             prior_prob[prior_prob < 0] = 1e-6
             np.put(prior_prob, illegal_moves, 0)
 
-            all_possible_states = []
-            for move_int in possible_moves:
-                row, col = divmod(move_int, 3)
+            all_possible_state = []
+            for move in possible_moves:
                 board_copy = deepcopy(board)
+                row, col = divmod(move, 3)
                 board_copy.add_move(self.type, row, col)
                 next_state = Board.arr2str(board_copy.board)
-                all_possible_states.append(next_state)
+                all_possible_state.append(next_state)
 
-                # state_statistics = self.edge_statistics[next_state]
-                # P = prior_prob[idx]
-                # state_statistics['P'] = P
-                # state_statistics['PUCT'] = mcts.MCTS.PUCT_function(self.type, N, move_statistics[k])
-
-            move_statistics = dict((states, self.nodes[states]) for states in all_possible_states)
+            move_statistics = dict((next_state, self.tree[next_state]) for next_state in all_possible_state)
             m = list(move_statistics.keys())
 
-            N = sum(v['N'] for v in move_statistics.values())
             for idx in range(len(m)):
                 k = m[idx]
                 move_int = possible_moves[idx]
                 P = prior_prob[move_int]
 
-                move_statistics[k]['P'] = P
-                move_statistics[k]['PUCT'] = mcts.MCTS.PUCT_function(self.type, N, move_statistics[k])
+                node = move_statistics[k]
+                node.P = P
+                node.PUCT = mcts.PUCT_function(10, self.type, node)
 
             # for player2, want to minimize PUCT
-            puct = np.array([move_statistics[k]['PUCT'] for k in m])
+            puct = np.array([move_statistics[k].PUCT for k in m])
             min_puct = np.min(puct)
             if min_puct < 0: puct -= 1.1*min_puct
 
