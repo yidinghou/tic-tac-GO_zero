@@ -2,149 +2,15 @@ import os
 import numpy as np
 import board
 import pickle
-import board as b
+import board as Board
 import player
 import game
 from copy import deepcopy
 
 from neural_network import*
 
-
-class MCTS():
-	def __init__(self):
-		self.MCTS_DIR = os.path.join('/Users/yidinghou/Desktop/Projects/tic-tac-GO_zero', 'mcts')
-		self.PUCT_CONSTANT = 10.0
-		self.TREE_FILE = 'tree.pkl'
-		self.EDGES_FILE = 'edges.pkl'
-		self.NODES_FILE = 'nodes.pkl'
-		self.TREE_PATH = os.path.join(self.MCTS_DIR, self.TREE_FILE)
-		self.EDGES_PATH = os.path.join(self.MCTS_DIR, self.EDGES_FILE)
-		self.NODES_PATH = os.path.join(self.MCTS_DIR, self.NODES_FILE)
-
-		self.WIN2DICT_MAP = {-1: 'L', 0: 'D', 1: 'W'}
-
-	def get_tree_and_edges(self, reset=False):
-		if not os.path.isdir(self.MCTS_DIR):
-			os.mkdir(self.MCTS_DIR)
-
-		if reset:
-			if os.path.isfile(self.TREE_PATH):
-				os.remove(self.TREE_PATH)
-			if os.path.isfile(self.EDGES_PATH):
-				os.remove(self.EDGES_PATH)
-			if os.path.isfile(self.NODES_PATH):
-				os.remove(self.NODES_PATH)
-
-		if not (os.path.isfile(self.TREE_PATH) or os.path.isfile(self.EDGES_PATH) or os.path.isfile(self.NODES_PATH)):
-			tree, edges, nodes = board.Board.generate_state_space()
-			self.save_tree_edges(tree, edges, nodes)
-		else:
-			tree, edges, nodes = self.load_tree_edges()
-		return tree, edges, nodes
-
-	def save_tree_edges(self, tree, edges, nodes):
-		with open(self.TREE_PATH, 'wb') as t:
-			pickle.dump(tree, t, pickle.HIGHEST_PROTOCOL)
-		with open(self.EDGES_PATH, 'wb') as e:
-			pickle.dump(edges, e, pickle.HIGHEST_PROTOCOL)
-		with open(self.NODES_PATH, 'wb') as n:
-			pickle.dump(nodes, n, pickle.HIGHEST_PROTOCOL)
-
-	def load_tree_edges(self):
-		with open(self.TREE_PATH, 'rb') as t:
-			tree = pickle.load(t)
-		with open(self.EDGES_PATH, 'rb') as e:
-			edges = pickle.load(e)
-		with open(self.NODES_PATH, 'rb') as n:
-			nodes = pickle.load(n)
-		return tree, edges, nodes
-
-	def update_mcts_edges(self, new_games):
-		tree, edges, NODES = self.get_tree_and_edges()
-		for game in new_games:
-			win = game[1]
-			node = board.Board.arr2str(game[0][0])
-			NODES[node]['N'] += 1
-			NODES[node][self.WIN2DICT_MAP[win]] += 1
-			NODES[node]['Q'] = NODES[node]['W'] / NODES[node]['N']
-
-			for i in range(len(game[0]) - 1):
-				initial = game[0][i]
-				final = game[0][i + 1]
-
-				edge = board.Board.arr2str(initial) + '2' + board.Board.arr2str(final)
-				edges[edge]['N'] += 1
-
-				node = board.Board.arr2str(final)
-				NODES[node]['N'] += 1
-				NODES[node][self.WIN2DICT_MAP[win]] += 1
-				NODES[node]['Q'] = NODES[node]['W'] / NODES[node]['N']
-
-	def PUCT_function(self, bool, N, edge):
-		if bool == -1:
-			Q = 1 - edge['Q']
-		else:
-			Q = edge['Q']
-
-		puct = Q + self.PUCT_CONSTANT * edge['P'] * np.sqrt(N) / (1 + edge['N'])
-		return puct
-
-
-
-curr_mcts = MCTS()
-curr_mcts.get_tree_and_edges(reset=True)
-tree, edge_statistics, nodes = curr_mcts.get_tree_and_edges()
-
-
-def simulate(players, board, nodes, edges, turn):
-	player_idx = turn % 2
-	curr_player = players[player_idx]
-	possible_moves = np.where(board.board.ravel() == 0)[0]
-	curr_state = b.Board.arr2str(board.board)
-
-	for move in possible_moves:
-		board_copy = deepcopy(board)
-		row, col = divmod(move, 3)
-		board_copy.add_move(curr_player.type, row, col)
-		winner = b.Board.winner(board_copy.board)
-		next_state = b.Board.arr2str(board_copy.board)
-		node_next = nodes[next_state]
-
-		edges[curr_state + "2" + next_state]["N"] += 1
-
-		if winner != 0:
-			if winner == 1:
-				node_next["W"] += 1
-			elif winner == -1:
-				node_next["L"] += 1
-
-			node_next["N"] += 1
-			node_next["Q"] = (node_next["W"] - node_next["L"]) / node_next["N"]
-		else:
-			if board_copy.full():
-				node_next["N"] += 1
-				node_next["Q"] = (node_next["W"] - node_next["L"]) / node_next["N"]
-			else:
-				simulate(players, board_copy, nodes, edges, turn + 1)
-
-
 player1 = player.Zero_Player('x', 'Bot_ZERO', nn_type="w", temperature=1)
 player2 = player.Zero_Player('o', 'Bot_ZERO', nn_type="w", temperature=1)
-
-bod = b.Board()
-
-test = np.array([[  1,   0,  -1],
-                 [ -1,  -1,  1],
-                 [  0,   1,  1]])
-bod.board = test
-
-players = [player1, player2]
-turn = 7
-
-simulate(players, bod, nodes, edge_statistics, turn)
-
-value_df = create_values_df(nodes)
-moves_df = create_policy_df(edge_statistics)
 
 
 class Node():
@@ -154,10 +20,15 @@ class Node():
 		self.children = []
 		self.eval = False
 		self.value = 0
+		self.W = 0
+		self.D = 0
+		self.L = 0
+		self.P = 0
+		self.Q = 0
 		self.N = 0
+		self.Turn = 0
 
-		bod = b.Board()
-		self.board_arr = bod.str2arr(id_)
+		self.board_arr = Board.str2arr(id_)
 
 		turns = len(id_.replace(" ", ""))
 		idx = (turns) % 2
@@ -170,39 +41,6 @@ class Node():
 		return len(self.parent) == 0
 
 
-node_tree_dict = {}
-
-for idx, value in moves_df.iterrows():
-	parent_id = value["init_state"]
-	child_id = value["final_state"]
-
-	if not parent_id in node_tree_dict.keys():
-		parent_node = Node(parent_id)
-		node_tree_dict[parent_id] = parent_node
-	else:
-		parent_node = node_tree_dict[parent_id]
-
-	if not child_id in node_tree_dict.keys():
-		child_node = Node(child_id)
-		node_tree_dict[child_id] = child_node
-	else:
-		child_node = node_tree_dict[child_id]
-
-	parent_node.children.append(child_node)
-	child_node.parent.append(parent_node)
-
-terminal = [x for x in node_tree_dict.values() if x.is_leaf()]
-for node in terminal:
-	board_arr = bod.str2arr(node.id)
-	node.board_arr = board_arr
-	winner = b.Board.winner(board_arr)
-	node.value = winner
-	node.N += 1
-	node.eval = True
-
-root = [x for x in node_tree_dict.values() if x.is_root()][0]
-
-
 def eval_to_leaf(parent):
 	while parent.eval == False:
 		middle = [node for node in parent.children if not node.eval]
@@ -211,8 +49,112 @@ def eval_to_leaf(parent):
 
 		all_eval = len(middle) == 0
 		if all_eval:
-			values = [node.value * parent.turn for node in parent.children]
-			parent.value = max(values)* parent.turn
+			if parent.turn == 1:
+				value_funt = max
+			else:
+				value_funt = min
+			values = [node.value for node in parent.children]
+			parent.value = value_funt(values)
 			parent.eval = True
 
-eval_to_leaf(root)
+
+TREE = {}
+
+
+def get_node_id(new_node_id, TREE):
+	board_arr = Board.str2arr(new_node_id)
+	sym_brd = create_symmetry(board_arr)
+	sym_id = [Board.arr2str(brd) for brd in sym_brd]
+
+	intersection = list(sym_id & TREE.keys())
+
+	return intersection
+
+
+def create_symmetry(board_arr):
+	rot_brd = [board_arr]
+	for i in range(1, 4):
+		rot = np.rot90(board_arr, k=i)
+		rot_brd.append(rot)
+
+	flip_brd = [np.flip(brd) for brd in rot_brd]
+
+	sym_brd = rot_brd + flip_brd
+
+	return sym_brd
+
+
+def simulate(players, board, TREE, EDGES, turn):
+	player_idx = turn % 2
+	opp_idx = (turn + 1) % 2
+	curr_player = players[player_idx]
+	opp_player = players[opp_idx]
+
+	possible_moves = np.where(board.board.ravel() == 0)[0]
+	curr_state = Board.arr2str(board.board)
+
+	node_id = get_node_id(curr_state, TREE)
+	if len(node_id) == 0:
+		parent_node = Node(curr_state)
+		add_node(parent_node, TREE)
+	else:
+		parent_node = TREE[node_id[0]]
+
+	parent_node.Turn = curr_player.type
+
+	for move in possible_moves:
+		board_copy = deepcopy(board)
+		row, col = divmod(move, 3)
+		board_copy.add_move(curr_player.type, row, col)
+		winner = Board.Board.winner(board_copy.board)
+		next_state = Board.arr2str(board_copy.board)
+
+		node_id = get_node_id(next_state, TREE)
+		if len(node_id) == 0:
+			child_node = Node(next_state)
+			add_node(child_node, TREE)
+		else:
+			child_node = TREE[node_id[0]]
+
+		edge_id = parent_node.id + "2" + child_node.id
+
+		if edge_id in EDGES.keys():
+			EDGES[edge_id] += 1
+		else:
+			EDGES[edge_id] = 1
+
+		child_node.Turn = opp_player.type
+		child_node.parent.append(parent_node)
+		parent_node.children.append(child_node)
+
+		if winner != 0:
+			if winner == 1:
+				child_node.W += 1
+				parent_node.W += 1
+			elif winner == -1:
+				child_node.L += 1
+				parent_node.L += 1
+		else:
+			if not board_copy.full():
+				simulate(players, board_copy, TREE, EDGES, turn + 1)
+
+
+bod = b.Board()
+TREE = {}
+EDGES = {}
+
+test = np.array([[  1,   -1,  1],
+                 [  1,   1,   -1],
+                 [  0,   0,  -1]])
+
+n_map = {-1:"o", 0: " ", 1: "x"}
+
+str_state = ''.join([n_map[i] for i in test.reshape(9,)])
+str_state
+
+bod.board = test
+
+players = [player1, player2]
+turn = 7
+
+simulate(players, bod, TREE, EDGES,turn)

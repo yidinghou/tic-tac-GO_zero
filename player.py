@@ -3,7 +3,7 @@ __author__ = 'Florin Bora'
 import os
 import numpy as np
 import neural_network
-import board as b
+import board as Board
 import mcts
 from copy import deepcopy
 import keras
@@ -47,10 +47,9 @@ class Interactive_Player():
 class Zero_Player():
 
     def __init__(self, type, name, nn_type, temperature=1):
-        self.type = b.Board.STR2INT_MAP[type]
+        self.type = Board.STR2INT_MAP[type]
         self.name = name
         self.temperature = temperature
-        self.tree, self.edge_statistics, self.nodes = mcts.MCTS.get_tree_and_edges()
         self.value_estimate = ""
 
     def load_keras(self):
@@ -122,7 +121,7 @@ class Zero_Player():
                 row, col = divmod(move_int, 3)
                 board_copy = deepcopy(board)
                 board_copy.add_move(self.type, row, col)
-                next_state = b.Board.arr2str(board_copy.board)
+                next_state = Board.arr2str(board_copy.board)
                 all_possible_states.append(next_state)
 
                 # state_statistics = self.edge_statistics[next_state]
@@ -166,7 +165,7 @@ class Zero_Player():
 
 def main():
     player = Random_Player('x', 'Random BOT')
-    board = b.Board()
+    board = Board.Board()
     move = player.turn(board)
 
 
