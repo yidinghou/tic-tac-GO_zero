@@ -1,5 +1,3 @@
-__author__='Florin Bora'
-
 import os
 import numpy as np
 import functools

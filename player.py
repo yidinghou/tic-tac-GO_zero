@@ -7,7 +7,7 @@ import board as Board
 import mcts
 from copy import deepcopy
 import keras
-import tensorflow as tf
+from statistics import *
 
 class Random_Player():
     def __init__(self, type, name):
@@ -50,8 +50,9 @@ class Zero_Player():
         self.type = Board.STR2INT_MAP[type]
         self.name = name
         self.temperature = temperature
-        self.tree = {}
+        self.tree = ""
         self.value_estimate = ""
+        self.keras_nn = ""
 
     def load_keras(self):
         try:
@@ -64,25 +65,40 @@ class Zero_Player():
         Qmax = -100
         best_move = np.random.choice(possible_moves, 1)
 
-        play_map = np.zeros(board.SIZE)
+        play_map = np.zeros(Board.SIZE)
 
         for move in possible_moves:
             next_board = deepcopy(board)
             next_board.add_move(self.type, *divmod(move, 3))
-            x_inp = np.stack([[next_board.board]], -1)
-            pred_win = self.keras_nn.predict(x_inp)[0]
-            # pred_one_win = pred_win[2]
-            # draw = pred_win[1]
-            # pred_two_win = pred_win[0]
+            sym_boards = mcts.create_symmetry(next_board.board)
+            sym_pred_one_win = []
+            sym_pred_two_win = []
 
-            pred_one_win = pred_win
-            pred_two_win = 1 - pred_win
+            for brd_arr in sym_boards:
+                x_inp = np.stack([[brd_arr]], -1)
+                pred_win = self.keras_nn.predict(x_inp)[0][0][0]
+
+                # pred_one_win = pred_win[2]
+                # draw = pred_win[1]
+                # pred_two_win = pred_win[0]
+
+                pred_one_win = pred_win
+                # draw = pred_win[1]
+                pred_two_win = 1-pred_one_win
+
+                sym_pred_one_win.append(pred_one_win)
+                sym_pred_two_win.append(pred_two_win)
+
+            pred_one_win = sum(sym_pred_one_win)
+            pred_two_win = sum(sym_pred_two_win)
+
+                # pred_one_win = pred_win
+                # pred_two_win = 1 - pred_win
 
             if self.type == 1:
-                Q = pred_one_win
+                Q = - pred_two_win
             else:
-                Q = pred_two_win
-
+                Q = - pred_one_win
 
             if Q > Qmax:
                 Qmax = Q
@@ -110,7 +126,6 @@ class Zero_Player():
 
             illegal_moves = np.where(board.board.ravel()!=0)[0]
             possible_moves = np.where(board.board.ravel()==0)[0]
-            x_inp = np.stack([[board.board]], -1)
             pred_winner, prior_prob = 0, np.zeros(9)
 
             prior_prob[prior_prob < 0] = 1e-6
@@ -124,7 +139,7 @@ class Zero_Player():
                 next_state = Board.arr2str(board_copy.board)
                 all_possible_state.append(next_state)
 
-            move_statistics = dict((next_state, self.tree[next_state]) for next_state in all_possible_state)
+            move_statistics = dict((next_state, mcts.get_node(next_state, self.tree.TREE)) for next_state in all_possible_state)
             m = list(move_statistics.keys())
 
             for idx in range(len(m)):
@@ -133,8 +148,9 @@ class Zero_Player():
                 P = prior_prob[move_int]
 
                 node = move_statistics[k]
-                node.P = P
-                node.PUCT = mcts.PUCT_function(10, self.type, node)
+                # node.P = P
+                node.P = node.N
+                node.PUCT = mcts.PUCT_function(1, self.type, node)
 
             # for player2, want to minimize PUCT
             puct = np.array([move_statistics[k].PUCT for k in m])

@@ -1,6 +1,6 @@
 __author__ = 'Florin Bora'
 
-import board as b
+import board as Board
 
 import pandas as pd
 import os
@@ -36,9 +36,9 @@ def create_values_df(nodes):
     keys = list(nodes.keys())
     for key in keys:
         X.append(key)
-        Y.append(nodes[key]["Q"])
-        N.append(nodes[key]["N"])
-        T.append(nodes[key]["TURN"])
+        Y.append(nodes[key].Q)
+        N.append(nodes[key].N)
+        T.append(nodes[key].Turn)
 
     X = np.array(X)
     Y = np.array(Y)
@@ -56,7 +56,6 @@ def create_values_df(nodes):
     return value_df
 
 def create_policy_df(edge_statistics):
-    board = b.Board
     N = []
     Y_move = []
 
@@ -64,19 +63,19 @@ def create_policy_df(edge_statistics):
     X_final_state = []
 
     for key in list(edge_statistics.keys()):
-        state = edge_statistics[key]
+        num = edge_statistics[key]
         initial_state, final_state = key.split("2")
         X_init_state.append(initial_state)
         X_final_state.append(final_state)
 
-        initial_arr = board.str2arr(initial_state)
-        final_arr = board.str2arr(final_state)
+        initial_arr = Board.str2arr(initial_state)
+        final_arr = Board.str2arr(final_state)
         move = final_arr - initial_arr
         p_type = move.sum()
         move = move * p_type
         move = move.reshape(-1, 9)[0]
         move = np.where(move == 1)[0][0]
-        N.append(state["N"])
+        N.append(num)
         Y_move.append(move)
 
     Y_move = np.array(Y_move)
@@ -118,10 +117,9 @@ def create_data_from_mcts(edge_statistics, nodes):
 
 
 def update_nn_training_set(edge_statistics, nodes):
-    board = b.Board
     master_df = create_data_from_mcts(edge_statistics, nodes)
     X = master_df["init_state"].values
-    X_clean = [board.str2arr(x) for x in X]
+    X_clean = [Board.str2arr(x) for x in X]
     Y_value = master_df["Value"].values
 
     # values are between 0 and 1, multiply by 2 to get range(0,2)
@@ -129,7 +127,7 @@ def update_nn_training_set(edge_statistics, nodes):
     Y_value_one_hot = np.eye(3)[targets.astype(int)]
     Y_policy_one_hot = master_df[[str(i) for i in range(10)]].div(master_df["N"], axis='rows').values
 
-    return X_clean, Y_value_one_hot, Y_policy_one_hot
+    return X_clean, Y_value, Y_policy_one_hot
 
 
 def train_nn(model, edge_statistics, nodes, iterations=10):
@@ -153,17 +151,17 @@ def train_nn(model, edge_statistics, nodes, iterations=10):
 def CNN_Model():
     Input_1 = Input(shape=(3, 3, 1))
 
-    x1 = Conv2D(filters=6, kernel_size=(1, 3), activation='relu',
+    x1 = Conv2D(filters=4, kernel_size=(1, 3), activation='relu',
                 kernel_regularizer=l2(0.0005),
                 kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
                 input_shape=(3, 3, 1))(Input_1)
 
-    x2 = Conv2D(filters=6, kernel_size=(3, 1), activation='relu',
+    x2 = Conv2D(filters=4, kernel_size=(3, 1), activation='relu',
                 kernel_regularizer=l2(0.0005),
                 kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
                 input_shape=(3, 3, 1))(Input_1)
 
-    x3 = Conv2D(filters=10, kernel_size=(3, 3), activation='relu',
+    x3 = Conv2D(filters=16, kernel_size=(3, 3), activation='relu',
                 kernel_regularizer=l2(0.0005),
                 kernel_initializer=initializers.RandomNormal(stddev=0.1, mean=0),
                 input_shape=(3, 3, 1))(Input_1)
@@ -182,54 +180,13 @@ def CNN_Model():
     policy_head = Dense(10, activation='softmax', name="P")(policy_head)
 
     model = Model(inputs=Input_1, outputs=[value_head, policy_head])
-    opt = SGD(lr=0.1, momentum=0.09)
+    opt = SGD(lr=0.01, momentum=0.09)
     model.compile(optimizer=opt,
-                         loss={"P": 'categorical_crossentropy', "V": "categorical_crossentropy"},
-                         metrics=['acc'])
+                  loss={"V": "categorical_crossentropy", "P": "categorical_crossentropy"},
+                  loss_weights=[1, 0],
+                  metrics=['acc'])
+
     return model
-
-class nn_predictor():
-    BEST = None
-    LAST = None
-    CHECK_POINTS_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'nn_check_pts')
-    CHECK_POINTS_NAME = os.path.join(CHECK_POINTS_DIR, 'nn')
-    META = os.path.join(CHECK_POINTS_DIR, 'nn.meta')
-
-    def __init__(self, nn_type):
-        if nn_type in ['best', 'last']:
-            if nn_predictor.LAST is None or nn_predictor.BEST is None:
-                # if no model was ever constructed
-                self.model = CNN_Model()
-                with tf.Session(graph=self.model.graph) as sess:
-                    sess.run(self.model.init_op)
-                    saver = tf.train.Saver(tf.global_variables())
-                    saver.export_meta_graph(nn_predictor.META)
-                    init_model = saver.save(sess, nn_predictor.CHECK_POINTS_NAME,
-                        global_step=self.model.global_step, write_meta_graph=False)
-                nn_predictor.LAST = init_model
-                nn_predictor.BEST = init_model
-            check_point = nn_predictor.LAST if nn_type == 'last' else nn_predictor.BEST
-        else:
-            check_point = nn_type
-
-        self.sess = tf.Session()
-        saver = tf.train.import_meta_graph(nn_predictor.META)
-        saver.restore(self.sess, check_point)
-        self.X_tf = self.sess.graph.get_tensor_by_name('X:0')
-        self.y_tf = self.sess.graph.get_tensor_by_name('activation3:0')
-
-    def predict(self, input):
-        input_np = input.reshape(-1, 9)
-        output_np = self.sess.run(self.y_tf, feed_dict={self.X_tf: input_np})
-        output_np = output_np.reshape(12)
-        return output_np[:3], output_np[3:]
-
-    @classmethod
-    def reset_nn_check_pts(cls):
-        if not os.path.isdir(cls.CHECK_POINTS_DIR):
-            os.mkdir(cls.CHECK_POINTS_DIR)
-        for file in os.listdir(cls.CHECK_POINTS_DIR):
-            os.remove(os.path.join(cls.CHECK_POINTS_DIR, file))
 
 def main():
     print('')

@@ -4,6 +4,7 @@ import board
 import pickle
 import board as Board
 from copy import deepcopy
+import player
 
 class MCTS():
     def __init__(self):
@@ -14,6 +15,7 @@ class MCTS():
         self.TREE_PATH = os.path.join(self.MCTS_DIR, self.TREE_FILE)
         self.NODES_PATH = os.path.join(self.MCTS_DIR, self.NODES_FILE)
         self.TREE = {}
+        self.EDGES = {}
 
 
     def get_tree_and_edges(self, reset=False):
@@ -23,6 +25,7 @@ class MCTS():
         if reset:
             if os.path.isfile(self.TREE_PATH):
                 os.remove(self.TREE_PATH)
+
 
     def save_tree_edges(self):
         with open(self.TREE_PATH, 'wb') as t:
@@ -36,7 +39,7 @@ class MCTS():
 
 
     def update_nodes(self):
-        for nodes in self.TREE.values():
+        for nodes in [n for n in self.TREE.values() if n.N > 0]:
             nodes.Q = (nodes.W - nodes.L)/nodes.N
             nodes.Q = nodes.Q/2 + 0.5
 
@@ -47,14 +50,8 @@ def PUCT_function(PUCT_CONSTANT, bool, node):
     else:
         Q = node.Q
 
-    puct = Q + PUCT_CONSTANT * node.P * np.sqrt(node.N) / (1 + node.N)
+    puct = Q + PUCT_CONSTANT * np.sqrt(node.N) / (1 + node.N)
     return puct
-
-
-def print_edges(edges):
-    for k in edges.keys():
-        if edges[k]['N'] == 0:
-            print('|{}|'.format(k), edges[k])
 
 
 def is_node_in_tree(new_node_id, TREE):
@@ -76,7 +73,7 @@ def create_symmetry(board_arr):
         rot = np.rot90(board_arr, k=i)
         rot_brd.append(rot)
 
-    flip_brd = [np.flip(brd) for brd in rot_brd]
+    flip_brd = [np.flip(brd, axis=1) for brd in rot_brd]
 
     sym_brd = rot_brd + flip_brd
 
@@ -84,8 +81,7 @@ def create_symmetry(board_arr):
 
 
 def get_node(node_id, TREE):
-    node_in_tree, node_id = is_node_in_tree(node_id, TREE)
-    if not node_in_tree:
+    if not node_id in TREE.keys():
         new_node = Node(node_id)
         TREE[node_id] = new_node
         return new_node
@@ -108,7 +104,7 @@ class Node():
         self.D = 0
         self.L = 0
         self.P = 0
-        self.Q = 0
+        self.Q = 0.5
         self.N = 0
         self.PUCT=0
         self.Turn = 0
@@ -126,71 +122,118 @@ class Node():
         return len(self.parents) == 0
 
 
-def simulate(players, turn, board, TREE, PATH, root, n=1):
+def simulate(players, turn, board, tree, PATH, root, n=1):
+    TREE = tree.TREE
+    EDGES = tree.EDGES
+
     simulations = 0
     player_idx = turn % 2
     opp_idx = (turn+1) % 2
     curr_player = players[player_idx]
     opp_player = players[opp_idx]
 
-    curr_state = Board.arr2str(board.board)
-    parent_node = get_node(curr_state, TREE)
+    curr_brd_sym = create_symmetry(board.board)
+    curr_state_sym = [Board.arr2str(brd) for brd in curr_brd_sym]
+    parent_node_sym =[get_node(node_id, TREE) for node_id in curr_state_sym]
+    parent_node = parent_node_sym[0]
+
     parent_node.Turn = curr_player.type
     winner = Board.winner(board.board)
     game_over = board.full() or (winner!=0)
-    if game_over:
-        if winner == 1:
-            parent_node.W += 1
-        elif winner == -1:
-            parent_node.L += 1
-        return
 
-    possible_moves = np.where(board.board.ravel() == 0)[0]
+    if game_over:
+        for sym in parent_node_sym:
+            sym.N +=1
+        if winner == 1:
+            for sym in parent_node_sym:
+                sym.N += 1
+        elif winner == -1:
+            for sym in parent_node_sym:
+                sym.N += 1
+        return
 
     while simulations < n:
         simulations += 1
         board_copy = deepcopy(board)
 
-        move = np.random.choice(possible_moves, 1)
-        row, col = divmod(move, 3)
+        if curr_player.name == "Human":
+            bot_player = player.Zero_Player('o', 'Bot_ZERO', nn_type="w", temperature=.3)
+            bot_player.value_estimate = "nn"
+            bot_player.tree = tree
+            bot_player.keras_nn = curr_player.keras_nn
+            bot_player.type = curr_player.type
+            _, row, col = bot_player.turn(board)
+        else:
+            _, row, col = curr_player.turn(board)
+
+
         board_copy.add_move(curr_player.type, row, col)
         next_state = Board.arr2str(board_copy.board)
+
+        next_brd_sym = create_symmetry(board_copy.board)
+        next_state_sym = [Board.arr2str(brd) for brd in next_brd_sym]
+        child_node_sym = [get_node(node_id, TREE) for node_id in next_state_sym]
+
         PATH["path"].append(next_state)
+        #adding in symmetries
+        for i in range(0,8):
+            curr_state = curr_state_sym[i]
+            next_state = next_state_sym[i]
+            edge_id = curr_state+"2"+next_state
+            if not edge_id in EDGES.keys():
+                EDGES[edge_id]=1
+            else:
+                EDGES[edge_id]+=1
 
-        child_node = get_node(next_state, TREE)
-
-        child_node.Turn = opp_player.type
-        if parent_node not in child_node.parents:
-            child_node.parents.append(parent_node)
-        if child_node not in parent_node.children:
-            parent_node.children.append(child_node)
+            child_node = child_node_sym[i]
+            parent_node = parent_node_sym[i]
+            child_node.Turn = opp_player.type
+            if parent_node not in child_node.parents:
+                child_node.parents.append(parent_node)
+            if child_node not in parent_node.children:
+                parent_node.children.append(child_node)
 
         winner = Board.winner(board_copy.board)
         game_over = board_copy.full() or (winner!=0)
 
         if not game_over:
-            simulate(players, turn + 1, board_copy, TREE, PATH, root, n=1)
+            simulate(players, turn + 1, board_copy, tree, PATH, root, n=1)
         else:
-            update_eval_tree(TREE, PATH, root, winner)
+            update_eval_tree(tree, PATH, root, winner)
+            tree.update_nodes()
             PATH["path"]=[]
 
+    end = 1
 
-def update_eval_tree(TREE, PATH, root, winner):
-    root_node = TREE[Board.arr2str(root.board)]
-    root_node.N+=1
+
+def update_eval_tree(tree, PATH, root, winner):
+    TREE = tree.TREE
+    root_brd_sym = create_symmetry(root.board)
+    root_state_sym = [Board.arr2str(brd) for brd in root_brd_sym]
+    root_node_sym = [get_node(node_id, TREE) for node_id in root_state_sym]
+    for node in root_node_sym:
+        node.N+=1
+
     if winner ==1:
-        root_node.W+=1
+        for node in root_node_sym:
+            node.W+=1
     elif winner ==-1:
-        root_node.L+=1
+        for node in root_node_sym:
+            node.L+=1
     else:
-        root_node.D+=1
+        for node in root_node_sym:
+            node.D+=1
 
     for node_id in PATH["path"]:
-        TREE[node_id].N+=1
-        if winner ==1:
-            TREE[node_id].W+=1
-        elif winner ==-1:
-            TREE[node_id].L+=1
-        else:
-            TREE[node_id].D+=1
+        brd_sym = create_symmetry(Board.str2arr(node_id))
+        state_sym = [Board.arr2str(brd) for brd in brd_sym]
+        node_sym = [get_node(node_id, TREE) for node_id in state_sym]
 
+        for node in node_sym:
+            node.N+=1
+            if winner ==1:
+                node.W+=1
+            elif winner ==-1:
+                node.L+=1
+            else:
+                node.D+=1
